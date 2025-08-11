@@ -1,0 +1,23 @@
+# stripe_dart_sdk.model.MandateOptionsParam3
+
+## Load the model package
+```dart
+import 'package:stripe_dart_sdk/api.dart';
+```
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**amount** | **int** |  | 
+**amountType** | **String** |  | 
+**description** | **String** |  | [optional] 
+**endDate** | **int** |  | [optional] 
+**interval** | **String** |  | 
+**intervalCount** | **int** |  | [optional] 
+**reference** | **String** |  | 
+**startDate** | **int** |  | 
+**supportedTypes** | **BuiltList&lt;String&gt;** |  | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+

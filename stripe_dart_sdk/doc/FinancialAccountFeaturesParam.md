@@ -1,0 +1,18 @@
+# stripe_dart_sdk.model.FinancialAccountFeaturesParam
+
+## Load the model package
+```dart
+import 'package:stripe_dart_sdk/api.dart';
+```
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**disableStripeUserAuthentication** | **bool** |  | [optional] 
+**externalAccountCollection** | **bool** |  | [optional] 
+**sendMoney** | **bool** |  | [optional] 
+**transferBalance** | **bool** |  | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+
