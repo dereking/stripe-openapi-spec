@@ -20,11 +20,14 @@ fi
 
 echo "⚙️ 生成 Dart SDK..."
 rm -rf "$OUTPUT_DIR"
+
 openapi-generator generate \
   -i "$OPENAPI_FILE" \
   -g dart-dio \
   -o "$OUTPUT_DIR" \
+  --global-property models=Price,Product,Customer,Subscription,Product,modelDocs=false \
   --additional-properties=pubName=$PACKAGE_NAME,pubVersion=$PACKAGE_VERSION
+ 
 
 echo "✅ 生成完成，SDK 已输出到 $OUTPUT_DIR"
 echo "ℹ️ 在 Flutter/Dart 项目中添加依赖:"
