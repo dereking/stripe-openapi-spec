@@ -1,0 +1,37 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.18
+
+// ignore_for_file: unused_element, unused_import
+// ignore_for_file: always_put_required_named_parameters_first
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: lines_longer_than_80_chars
+
+import 'package:openapi/api.dart';
+import 'package:test/test.dart';
+
+// tests for PersonDocumentsSpecs1
+void main() {
+  // final instance = PersonDocumentsSpecs1();
+
+  group('test PersonDocumentsSpecs1', () {
+    // DocumentsParam1 companyAuthorization
+    test('to test the property `companyAuthorization`', () async {
+      // TODO
+    });
+
+    // DocumentsParam1 passport
+    test('to test the property `passport`', () async {
+      // TODO
+    });
+
+    // DocumentsParam1 visa
+    test('to test the property `visa`', () async {
+      // TODO
+    });
+
+
+  });
+
+}

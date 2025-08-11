@@ -1,0 +1,34 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.18
+
+// ignore_for_file: unused_element, unused_import
+// ignore_for_file: always_put_required_named_parameters_first
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: lines_longer_than_80_chars
+
+import 'package:openapi/api.dart';
+import 'package:test/test.dart';
+
+// tests for IssuingCardGooglePay
+void main() {
+  // final instance = IssuingCardGooglePay();
+
+  group('test IssuingCardGooglePay', () {
+    // Google Pay Eligibility
+    // bool eligible
+    test('to test the property `eligible`', () async {
+      // TODO
+    });
+
+    // Reason the card is ineligible for Google Pay
+    // String ineligibleReason
+    test('to test the property `ineligibleReason`', () async {
+      // TODO
+    });
+
+
+  });
+
+}

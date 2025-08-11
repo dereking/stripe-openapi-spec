@@ -1,0 +1,190 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.18
+
+// ignore_for_file: unused_element, unused_import
+// ignore_for_file: always_put_required_named_parameters_first
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: lines_longer_than_80_chars
+
+part of openapi.api;
+
+class SetupIntentPaymentMethodOptionsAmazonPay1 {
+  /// Returns a new [SetupIntentPaymentMethodOptionsAmazonPay1] instance.
+  SetupIntentPaymentMethodOptionsAmazonPay1({
+    this.verificationMethod,
+  });
+
+  /// Bank account verification method.
+  SetupIntentPaymentMethodOptionsAmazonPay1VerificationMethodEnum? verificationMethod;
+
+  @override
+  bool operator ==(Object other) => identical(this, other) || other is SetupIntentPaymentMethodOptionsAmazonPay1 &&
+    other.verificationMethod == verificationMethod;
+
+  @override
+  int get hashCode =>
+    // ignore: unnecessary_parenthesis
+    (verificationMethod == null ? 0 : verificationMethod!.hashCode);
+
+  @override
+  String toString() => 'SetupIntentPaymentMethodOptionsAmazonPay1[verificationMethod=$verificationMethod]';
+
+  Map<String, dynamic> toJson() {
+    final json = <String, dynamic>{};
+    if (this.verificationMethod != null) {
+      json[r'verification_method'] = this.verificationMethod;
+    } else {
+      json[r'verification_method'] = null;
+    }
+    return json;
+  }
+
+  /// Returns a new [SetupIntentPaymentMethodOptionsAmazonPay1] instance and imports its values from
+  /// [value] if it's a [Map], null otherwise.
+  // ignore: prefer_constructors_over_static_methods
+  static SetupIntentPaymentMethodOptionsAmazonPay1? fromJson(dynamic value) {
+    if (value is Map) {
+      final json = value.cast<String, dynamic>();
+
+      // Ensure that the map contains the required keys.
+      // Note 1: the values aren't checked for validity beyond being non-null.
+      // Note 2: this code is stripped in release mode!
+      assert(() {
+        requiredKeys.forEach((key) {
+          assert(json.containsKey(key), 'Required key "SetupIntentPaymentMethodOptionsAmazonPay1[$key]" is missing from JSON.');
+          assert(json[key] != null, 'Required key "SetupIntentPaymentMethodOptionsAmazonPay1[$key]" has a null value in JSON.');
+        });
+        return true;
+      }());
+
+      return SetupIntentPaymentMethodOptionsAmazonPay1(
+        verificationMethod: SetupIntentPaymentMethodOptionsAmazonPay1VerificationMethodEnum.fromJson(json[r'verification_method']),
+      );
+    }
+    return null;
+  }
+
+  static List<SetupIntentPaymentMethodOptionsAmazonPay1> listFromJson(dynamic json, {bool growable = false,}) {
+    final result = <SetupIntentPaymentMethodOptionsAmazonPay1>[];
+    if (json is List && json.isNotEmpty) {
+      for (final row in json) {
+        final value = SetupIntentPaymentMethodOptionsAmazonPay1.fromJson(row);
+        if (value != null) {
+          result.add(value);
+        }
+      }
+    }
+    return result.toList(growable: growable);
+  }
+
+  static Map<String, SetupIntentPaymentMethodOptionsAmazonPay1> mapFromJson(dynamic json) {
+    final map = <String, SetupIntentPaymentMethodOptionsAmazonPay1>{};
+    if (json is Map && json.isNotEmpty) {
+      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      for (final entry in json.entries) {
+        final value = SetupIntentPaymentMethodOptionsAmazonPay1.fromJson(entry.value);
+        if (value != null) {
+          map[entry.key] = value;
+        }
+      }
+    }
+    return map;
+  }
+
+  // maps a json object with a list of SetupIntentPaymentMethodOptionsAmazonPay1-objects as value to a dart map
+  static Map<String, List<SetupIntentPaymentMethodOptionsAmazonPay1>> mapListFromJson(dynamic json, {bool growable = false,}) {
+    final map = <String, List<SetupIntentPaymentMethodOptionsAmazonPay1>>{};
+    if (json is Map && json.isNotEmpty) {
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
+      for (final entry in json.entries) {
+        map[entry.key] = SetupIntentPaymentMethodOptionsAmazonPay1.listFromJson(entry.value, growable: growable,);
+      }
+    }
+    return map;
+  }
+
+  /// The list of required keys that must be present in a JSON.
+  static const requiredKeys = <String>{
+  };
+}
+
+/// Bank account verification method.
+class SetupIntentPaymentMethodOptionsAmazonPay1VerificationMethodEnum {
+  /// Instantiate a new enum with the provided [value].
+  const SetupIntentPaymentMethodOptionsAmazonPay1VerificationMethodEnum._(this.value);
+
+  /// The underlying value of this enum member.
+  final String value;
+
+  @override
+  String toString() => value;
+
+  String toJson() => value;
+
+  static const automatic = SetupIntentPaymentMethodOptionsAmazonPay1VerificationMethodEnum._(r'automatic');
+  static const instant = SetupIntentPaymentMethodOptionsAmazonPay1VerificationMethodEnum._(r'instant');
+  static const microdeposits = SetupIntentPaymentMethodOptionsAmazonPay1VerificationMethodEnum._(r'microdeposits');
+
+  /// List of all possible values in this [enum][SetupIntentPaymentMethodOptionsAmazonPay1VerificationMethodEnum].
+  static const values = <SetupIntentPaymentMethodOptionsAmazonPay1VerificationMethodEnum>[
+    automatic,
+    instant,
+    microdeposits,
+  ];
+
+  static SetupIntentPaymentMethodOptionsAmazonPay1VerificationMethodEnum? fromJson(dynamic value) => SetupIntentPaymentMethodOptionsAmazonPay1VerificationMethodEnumTypeTransformer().decode(value);
+
+  static List<SetupIntentPaymentMethodOptionsAmazonPay1VerificationMethodEnum> listFromJson(dynamic json, {bool growable = false,}) {
+    final result = <SetupIntentPaymentMethodOptionsAmazonPay1VerificationMethodEnum>[];
+    if (json is List && json.isNotEmpty) {
+      for (final row in json) {
+        final value = SetupIntentPaymentMethodOptionsAmazonPay1VerificationMethodEnum.fromJson(row);
+        if (value != null) {
+          result.add(value);
+        }
+      }
+    }
+    return result.toList(growable: growable);
+  }
+}
+
+/// Transformation class that can [encode] an instance of [SetupIntentPaymentMethodOptionsAmazonPay1VerificationMethodEnum] to String,
+/// and [decode] dynamic data back to [SetupIntentPaymentMethodOptionsAmazonPay1VerificationMethodEnum].
+class SetupIntentPaymentMethodOptionsAmazonPay1VerificationMethodEnumTypeTransformer {
+  factory SetupIntentPaymentMethodOptionsAmazonPay1VerificationMethodEnumTypeTransformer() => _instance ??= const SetupIntentPaymentMethodOptionsAmazonPay1VerificationMethodEnumTypeTransformer._();
+
+  const SetupIntentPaymentMethodOptionsAmazonPay1VerificationMethodEnumTypeTransformer._();
+
+  String encode(SetupIntentPaymentMethodOptionsAmazonPay1VerificationMethodEnum data) => data.value;
+
+  /// Decodes a [dynamic value][data] to a SetupIntentPaymentMethodOptionsAmazonPay1VerificationMethodEnum.
+  ///
+  /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
+  /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
+  /// cannot be decoded successfully, then an [UnimplementedError] is thrown.
+  ///
+  /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
+  /// and users are still using an old app with the old code.
+  SetupIntentPaymentMethodOptionsAmazonPay1VerificationMethodEnum? decode(dynamic data, {bool allowNull = true}) {
+    if (data != null) {
+      switch (data) {
+        case r'automatic': return SetupIntentPaymentMethodOptionsAmazonPay1VerificationMethodEnum.automatic;
+        case r'instant': return SetupIntentPaymentMethodOptionsAmazonPay1VerificationMethodEnum.instant;
+        case r'microdeposits': return SetupIntentPaymentMethodOptionsAmazonPay1VerificationMethodEnum.microdeposits;
+        default:
+          if (!allowNull) {
+            throw ArgumentError('Unknown enum value to decode: $data');
+          }
+      }
+    }
+    return null;
+  }
+
+  /// Singleton [SetupIntentPaymentMethodOptionsAmazonPay1VerificationMethodEnumTypeTransformer] instance.
+  static SetupIntentPaymentMethodOptionsAmazonPay1VerificationMethodEnumTypeTransformer? _instance;
+}
+
+

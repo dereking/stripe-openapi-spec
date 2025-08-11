@@ -1,0 +1,17 @@
+# openapi.model.PaymentPagesCheckoutSessionSavedPaymentMethodOptions
+
+## Load the model package
+```dart
+import 'package:openapi/api.dart';
+```
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**allowRedisplayFilters** | **List<String>** | Uses the `allow_redisplay` value of each saved payment method to filter the set presented to a returning customer. By default, only saved payment methods with ’allow_redisplay: ‘always’ are shown in Checkout. | [optional] [default to const []]
+**paymentMethodRemove** | **String** | Enable customers to choose if they wish to remove their saved payment methods. Disabled by default. | [optional] 
+**paymentMethodSave** | **String** | Enable customers to choose if they wish to save their payment method for future use. Disabled by default. | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+

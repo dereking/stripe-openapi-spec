@@ -1,0 +1,1093 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.18
+
+// ignore_for_file: unused_element, unused_import
+// ignore_for_file: always_put_required_named_parameters_first
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: lines_longer_than_80_chars
+
+part of openapi.api;
+
+class CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntent {
+  /// Returns a new [CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntent] instance.
+  CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntent({
+    this.amount,
+    this.amountCapturable,
+    this.amountDetails,
+    this.amountReceived,
+    this.application,
+    this.applicationFeeAmount,
+    this.automaticPaymentMethods,
+    this.canceledAt,
+    this.cancellationReason,
+    this.captureMethod,
+    this.clientSecret,
+    this.confirmationMethod,
+    required this.created,
+    this.currency,
+    this.customer,
+    this.description,
+    required this.id,
+    this.lastPaymentError,
+    this.latestCharge,
+    required this.livemode,
+    this.metadata = const {},
+    this.nextAction,
+    required this.object,
+    this.onBehalfOf,
+    this.paymentMethod,
+    this.paymentMethodConfigurationDetails,
+    this.paymentMethodOptions,
+    this.paymentMethodTypes = const [],
+    this.presentmentDetails,
+    this.processing,
+    this.receiptEmail,
+    this.review,
+    this.setupFutureUsage,
+    this.shipping,
+    this.statementDescriptor,
+    this.statementDescriptorSuffix,
+    required this.status,
+    this.transferData,
+    this.transferGroup,
+  });
+
+  /// Amount intended to be collected by this PaymentIntent. A positive integer representing how much to charge in the [smallest currency unit](https://stripe.com/docs/currencies#zero-decimal) (e.g., 100 cents to charge $1.00 or 100 to charge ¥100, a zero-decimal currency). The minimum amount is $0.50 US or [equivalent in charge currency](https://stripe.com/docs/currencies#minimum-and-maximum-charge-amounts). The amount value supports up to eight digits (e.g., a value of 99999999 for a USD charge of $999,999.99).
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? amount;
+
+  /// Amount that can be captured from this PaymentIntent.
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? amountCapturable;
+
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  PaymentIntentAmountDetails? amountDetails;
+
+  /// Amount that this PaymentIntent collects.
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  int? amountReceived;
+
+  PaymentIntentApplication? application;
+
+  /// The amount of the application fee (if any) that will be requested to be applied to the payment and transferred to the application owner's Stripe account. The amount of the application fee collected will be capped at the total amount captured. For more information, see the PaymentIntents [use case for connected accounts](https://stripe.com/docs/payments/connected-accounts).
+  int? applicationFeeAmount;
+
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  PaymentFlowsAutomaticPaymentMethodsPaymentIntent? automaticPaymentMethods;
+
+  /// Populated when `status` is `canceled`, this is the time at which the PaymentIntent was canceled. Measured in seconds since the Unix epoch.
+  int? canceledAt;
+
+  /// Reason for cancellation of this PaymentIntent, either user-provided (`duplicate`, `fraudulent`, `requested_by_customer`, or `abandoned`) or generated by Stripe internally (`failed_invoice`, `void_invoice`, `automatic`, or `expired`).
+  CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentCancellationReasonEnum? cancellationReason;
+
+  /// Controls when the funds will be captured from the customer's account.
+  CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentCaptureMethodEnum? captureMethod;
+
+  /// The client secret of this PaymentIntent. Used for client-side retrieval using a publishable key.   The client secret can be used to complete a payment from your frontend. It should not be stored, logged, or exposed to anyone other than the customer. Make sure that you have TLS enabled on any page that includes the client secret.  Refer to our docs to [accept a payment](https://stripe.com/docs/payments/accept-a-payment?ui=elements) and learn about how `client_secret` should be handled.
+  String? clientSecret;
+
+  /// Describes whether we can confirm this PaymentIntent automatically, or if it requires customer action to confirm the payment.
+  CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentConfirmationMethodEnum? confirmationMethod;
+
+  /// Time at which the object was created. Measured in seconds since the Unix epoch.
+  int created;
+
+  /// Three-letter [ISO currency code](https://www.iso.org/iso-4217-currency-codes.html), in lowercase. Must be a [supported currency](https://stripe.com/docs/currencies).
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? currency;
+
+  PaymentIntentCustomer? customer;
+
+  /// An arbitrary string attached to the object. Often useful for displaying to users.
+  String? description;
+
+  /// Unique identifier for the object.
+  String id;
+
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  ApiErrors? lastPaymentError;
+
+  PaymentIntentLatestCharge? latestCharge;
+
+  /// Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.
+  bool livemode;
+
+  /// Set of [key-value pairs](https://stripe.com/docs/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format. Learn more about [storing information in metadata](https://stripe.com/docs/payments/payment-intents/creating-payment-intents#storing-information-in-metadata).
+  Map<String, String> metadata;
+
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  PaymentIntentNextAction? nextAction;
+
+  /// String representing the object's type. Objects of the same type share the same value.
+  CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentObjectEnum object;
+
+  PaymentIntentOnBehalfOf? onBehalfOf;
+
+  PaymentIntentPaymentMethod? paymentMethod;
+
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  PaymentMethodConfigBizPaymentMethodConfigurationDetails? paymentMethodConfigurationDetails;
+
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  PaymentIntentPaymentMethodOptions? paymentMethodOptions;
+
+  /// The list of payment method types (e.g. card) that this PaymentIntent is allowed to use. A comprehensive list of valid payment method types can be found [here](https://docs.stripe.com/api/payment_methods/object#payment_method_object-type).
+  List<String> paymentMethodTypes;
+
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  PaymentFlowsPaymentIntentPresentmentDetails? presentmentDetails;
+
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  PaymentIntentProcessing? processing;
+
+  /// Email address that the receipt for the resulting payment will be sent to. If `receipt_email` is specified for a payment in live mode, a receipt will be sent regardless of your [email settings](https://dashboard.stripe.com/account/emails).
+  String? receiptEmail;
+
+  PaymentIntentReview? review;
+
+  /// Indicates that you intend to make future payments with this PaymentIntent's payment method.  If you provide a Customer with the PaymentIntent, you can use this parameter to [attach the payment method](/payments/save-during-payment) to the Customer after the PaymentIntent is confirmed and the customer completes any required actions. If you don't provide a Customer, you can still [attach](/api/payment_methods/attach) the payment method to a Customer after the transaction completes.  If the payment method is `card_present` and isn't a digital wallet, Stripe creates and attaches a [generated_card](/api/charges/object#charge_object-payment_method_details-card_present-generated_card) payment method representing the card to the Customer instead.  When processing card payments, Stripe uses `setup_future_usage` to help you comply with regional legislation and network rules, such as [SCA](/strong-customer-authentication).
+  CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentSetupFutureUsageEnum? setupFutureUsage;
+
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  Shipping? shipping;
+
+  /// Text that appears on the customer's statement as the statement descriptor for a non-card charge. This value overrides the account's default statement descriptor. For information about requirements, including the 22-character limit, see [the Statement Descriptor docs](https://docs.stripe.com/get-started/account/statement-descriptors).  Setting this value for a card charge returns an error. For card charges, set the [statement_descriptor_suffix](https://docs.stripe.com/get-started/account/statement-descriptors#dynamic) instead.
+  String? statementDescriptor;
+
+  /// Provides information about a card charge. Concatenated to the account's [statement descriptor prefix](https://docs.stripe.com/get-started/account/statement-descriptors#static) to form the complete statement descriptor that appears on the customer's statement.
+  String? statementDescriptorSuffix;
+
+  /// Status of this PaymentIntent, one of `requires_payment_method`, `requires_confirmation`, `requires_action`, `processing`, `requires_capture`, `canceled`, or `succeeded`. Read more about each PaymentIntent [status](https://stripe.com/docs/payments/intents#intent-statuses).
+  CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentStatusEnum status;
+
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  TransferData? transferData;
+
+  /// A string that identifies the resulting payment as part of a group. Learn more about the [use case for connected accounts](https://stripe.com/docs/connect/separate-charges-and-transfers).
+  String? transferGroup;
+
+  @override
+  bool operator ==(Object other) => identical(this, other) || other is CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntent &&
+    other.amount == amount &&
+    other.amountCapturable == amountCapturable &&
+    other.amountDetails == amountDetails &&
+    other.amountReceived == amountReceived &&
+    other.application == application &&
+    other.applicationFeeAmount == applicationFeeAmount &&
+    other.automaticPaymentMethods == automaticPaymentMethods &&
+    other.canceledAt == canceledAt &&
+    other.cancellationReason == cancellationReason &&
+    other.captureMethod == captureMethod &&
+    other.clientSecret == clientSecret &&
+    other.confirmationMethod == confirmationMethod &&
+    other.created == created &&
+    other.currency == currency &&
+    other.customer == customer &&
+    other.description == description &&
+    other.id == id &&
+    other.lastPaymentError == lastPaymentError &&
+    other.latestCharge == latestCharge &&
+    other.livemode == livemode &&
+    _deepEquality.equals(other.metadata, metadata) &&
+    other.nextAction == nextAction &&
+    other.object == object &&
+    other.onBehalfOf == onBehalfOf &&
+    other.paymentMethod == paymentMethod &&
+    other.paymentMethodConfigurationDetails == paymentMethodConfigurationDetails &&
+    other.paymentMethodOptions == paymentMethodOptions &&
+    _deepEquality.equals(other.paymentMethodTypes, paymentMethodTypes) &&
+    other.presentmentDetails == presentmentDetails &&
+    other.processing == processing &&
+    other.receiptEmail == receiptEmail &&
+    other.review == review &&
+    other.setupFutureUsage == setupFutureUsage &&
+    other.shipping == shipping &&
+    other.statementDescriptor == statementDescriptor &&
+    other.statementDescriptorSuffix == statementDescriptorSuffix &&
+    other.status == status &&
+    other.transferData == transferData &&
+    other.transferGroup == transferGroup;
+
+  @override
+  int get hashCode =>
+    // ignore: unnecessary_parenthesis
+    (amount == null ? 0 : amount!.hashCode) +
+    (amountCapturable == null ? 0 : amountCapturable!.hashCode) +
+    (amountDetails == null ? 0 : amountDetails!.hashCode) +
+    (amountReceived == null ? 0 : amountReceived!.hashCode) +
+    (application == null ? 0 : application!.hashCode) +
+    (applicationFeeAmount == null ? 0 : applicationFeeAmount!.hashCode) +
+    (automaticPaymentMethods == null ? 0 : automaticPaymentMethods!.hashCode) +
+    (canceledAt == null ? 0 : canceledAt!.hashCode) +
+    (cancellationReason == null ? 0 : cancellationReason!.hashCode) +
+    (captureMethod == null ? 0 : captureMethod!.hashCode) +
+    (clientSecret == null ? 0 : clientSecret!.hashCode) +
+    (confirmationMethod == null ? 0 : confirmationMethod!.hashCode) +
+    (created.hashCode) +
+    (currency == null ? 0 : currency!.hashCode) +
+    (customer == null ? 0 : customer!.hashCode) +
+    (description == null ? 0 : description!.hashCode) +
+    (id.hashCode) +
+    (lastPaymentError == null ? 0 : lastPaymentError!.hashCode) +
+    (latestCharge == null ? 0 : latestCharge!.hashCode) +
+    (livemode.hashCode) +
+    (metadata.hashCode) +
+    (nextAction == null ? 0 : nextAction!.hashCode) +
+    (object.hashCode) +
+    (onBehalfOf == null ? 0 : onBehalfOf!.hashCode) +
+    (paymentMethod == null ? 0 : paymentMethod!.hashCode) +
+    (paymentMethodConfigurationDetails == null ? 0 : paymentMethodConfigurationDetails!.hashCode) +
+    (paymentMethodOptions == null ? 0 : paymentMethodOptions!.hashCode) +
+    (paymentMethodTypes.hashCode) +
+    (presentmentDetails == null ? 0 : presentmentDetails!.hashCode) +
+    (processing == null ? 0 : processing!.hashCode) +
+    (receiptEmail == null ? 0 : receiptEmail!.hashCode) +
+    (review == null ? 0 : review!.hashCode) +
+    (setupFutureUsage == null ? 0 : setupFutureUsage!.hashCode) +
+    (shipping == null ? 0 : shipping!.hashCode) +
+    (statementDescriptor == null ? 0 : statementDescriptor!.hashCode) +
+    (statementDescriptorSuffix == null ? 0 : statementDescriptorSuffix!.hashCode) +
+    (status.hashCode) +
+    (transferData == null ? 0 : transferData!.hashCode) +
+    (transferGroup == null ? 0 : transferGroup!.hashCode);
+
+  @override
+  String toString() => 'CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntent[amount=$amount, amountCapturable=$amountCapturable, amountDetails=$amountDetails, amountReceived=$amountReceived, application=$application, applicationFeeAmount=$applicationFeeAmount, automaticPaymentMethods=$automaticPaymentMethods, canceledAt=$canceledAt, cancellationReason=$cancellationReason, captureMethod=$captureMethod, clientSecret=$clientSecret, confirmationMethod=$confirmationMethod, created=$created, currency=$currency, customer=$customer, description=$description, id=$id, lastPaymentError=$lastPaymentError, latestCharge=$latestCharge, livemode=$livemode, metadata=$metadata, nextAction=$nextAction, object=$object, onBehalfOf=$onBehalfOf, paymentMethod=$paymentMethod, paymentMethodConfigurationDetails=$paymentMethodConfigurationDetails, paymentMethodOptions=$paymentMethodOptions, paymentMethodTypes=$paymentMethodTypes, presentmentDetails=$presentmentDetails, processing=$processing, receiptEmail=$receiptEmail, review=$review, setupFutureUsage=$setupFutureUsage, shipping=$shipping, statementDescriptor=$statementDescriptor, statementDescriptorSuffix=$statementDescriptorSuffix, status=$status, transferData=$transferData, transferGroup=$transferGroup]';
+
+  Map<String, dynamic> toJson() {
+    final json = <String, dynamic>{};
+    if (this.amount != null) {
+      json[r'amount'] = this.amount;
+    } else {
+      json[r'amount'] = null;
+    }
+    if (this.amountCapturable != null) {
+      json[r'amount_capturable'] = this.amountCapturable;
+    } else {
+      json[r'amount_capturable'] = null;
+    }
+    if (this.amountDetails != null) {
+      json[r'amount_details'] = this.amountDetails;
+    } else {
+      json[r'amount_details'] = null;
+    }
+    if (this.amountReceived != null) {
+      json[r'amount_received'] = this.amountReceived;
+    } else {
+      json[r'amount_received'] = null;
+    }
+    if (this.application != null) {
+      json[r'application'] = this.application;
+    } else {
+      json[r'application'] = null;
+    }
+    if (this.applicationFeeAmount != null) {
+      json[r'application_fee_amount'] = this.applicationFeeAmount;
+    } else {
+      json[r'application_fee_amount'] = null;
+    }
+    if (this.automaticPaymentMethods != null) {
+      json[r'automatic_payment_methods'] = this.automaticPaymentMethods;
+    } else {
+      json[r'automatic_payment_methods'] = null;
+    }
+    if (this.canceledAt != null) {
+      json[r'canceled_at'] = this.canceledAt;
+    } else {
+      json[r'canceled_at'] = null;
+    }
+    if (this.cancellationReason != null) {
+      json[r'cancellation_reason'] = this.cancellationReason;
+    } else {
+      json[r'cancellation_reason'] = null;
+    }
+    if (this.captureMethod != null) {
+      json[r'capture_method'] = this.captureMethod;
+    } else {
+      json[r'capture_method'] = null;
+    }
+    if (this.clientSecret != null) {
+      json[r'client_secret'] = this.clientSecret;
+    } else {
+      json[r'client_secret'] = null;
+    }
+    if (this.confirmationMethod != null) {
+      json[r'confirmation_method'] = this.confirmationMethod;
+    } else {
+      json[r'confirmation_method'] = null;
+    }
+      json[r'created'] = this.created;
+    if (this.currency != null) {
+      json[r'currency'] = this.currency;
+    } else {
+      json[r'currency'] = null;
+    }
+    if (this.customer != null) {
+      json[r'customer'] = this.customer;
+    } else {
+      json[r'customer'] = null;
+    }
+    if (this.description != null) {
+      json[r'description'] = this.description;
+    } else {
+      json[r'description'] = null;
+    }
+      json[r'id'] = this.id;
+    if (this.lastPaymentError != null) {
+      json[r'last_payment_error'] = this.lastPaymentError;
+    } else {
+      json[r'last_payment_error'] = null;
+    }
+    if (this.latestCharge != null) {
+      json[r'latest_charge'] = this.latestCharge;
+    } else {
+      json[r'latest_charge'] = null;
+    }
+      json[r'livemode'] = this.livemode;
+      json[r'metadata'] = this.metadata;
+    if (this.nextAction != null) {
+      json[r'next_action'] = this.nextAction;
+    } else {
+      json[r'next_action'] = null;
+    }
+      json[r'object'] = this.object;
+    if (this.onBehalfOf != null) {
+      json[r'on_behalf_of'] = this.onBehalfOf;
+    } else {
+      json[r'on_behalf_of'] = null;
+    }
+    if (this.paymentMethod != null) {
+      json[r'payment_method'] = this.paymentMethod;
+    } else {
+      json[r'payment_method'] = null;
+    }
+    if (this.paymentMethodConfigurationDetails != null) {
+      json[r'payment_method_configuration_details'] = this.paymentMethodConfigurationDetails;
+    } else {
+      json[r'payment_method_configuration_details'] = null;
+    }
+    if (this.paymentMethodOptions != null) {
+      json[r'payment_method_options'] = this.paymentMethodOptions;
+    } else {
+      json[r'payment_method_options'] = null;
+    }
+      json[r'payment_method_types'] = this.paymentMethodTypes;
+    if (this.presentmentDetails != null) {
+      json[r'presentment_details'] = this.presentmentDetails;
+    } else {
+      json[r'presentment_details'] = null;
+    }
+    if (this.processing != null) {
+      json[r'processing'] = this.processing;
+    } else {
+      json[r'processing'] = null;
+    }
+    if (this.receiptEmail != null) {
+      json[r'receipt_email'] = this.receiptEmail;
+    } else {
+      json[r'receipt_email'] = null;
+    }
+    if (this.review != null) {
+      json[r'review'] = this.review;
+    } else {
+      json[r'review'] = null;
+    }
+    if (this.setupFutureUsage != null) {
+      json[r'setup_future_usage'] = this.setupFutureUsage;
+    } else {
+      json[r'setup_future_usage'] = null;
+    }
+    if (this.shipping != null) {
+      json[r'shipping'] = this.shipping;
+    } else {
+      json[r'shipping'] = null;
+    }
+    if (this.statementDescriptor != null) {
+      json[r'statement_descriptor'] = this.statementDescriptor;
+    } else {
+      json[r'statement_descriptor'] = null;
+    }
+    if (this.statementDescriptorSuffix != null) {
+      json[r'statement_descriptor_suffix'] = this.statementDescriptorSuffix;
+    } else {
+      json[r'statement_descriptor_suffix'] = null;
+    }
+      json[r'status'] = this.status;
+    if (this.transferData != null) {
+      json[r'transfer_data'] = this.transferData;
+    } else {
+      json[r'transfer_data'] = null;
+    }
+    if (this.transferGroup != null) {
+      json[r'transfer_group'] = this.transferGroup;
+    } else {
+      json[r'transfer_group'] = null;
+    }
+    return json;
+  }
+
+  /// Returns a new [CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntent] instance and imports its values from
+  /// [value] if it's a [Map], null otherwise.
+  // ignore: prefer_constructors_over_static_methods
+  static CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntent? fromJson(dynamic value) {
+    if (value is Map) {
+      final json = value.cast<String, dynamic>();
+
+      // Ensure that the map contains the required keys.
+      // Note 1: the values aren't checked for validity beyond being non-null.
+      // Note 2: this code is stripped in release mode!
+      assert(() {
+        requiredKeys.forEach((key) {
+          assert(json.containsKey(key), 'Required key "CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntent[$key]" is missing from JSON.');
+          assert(json[key] != null, 'Required key "CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntent[$key]" has a null value in JSON.');
+        });
+        return true;
+      }());
+
+      return CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntent(
+        amount: mapValueOfType<int>(json, r'amount'),
+        amountCapturable: mapValueOfType<int>(json, r'amount_capturable'),
+        amountDetails: PaymentIntentAmountDetails.fromJson(json[r'amount_details']),
+        amountReceived: mapValueOfType<int>(json, r'amount_received'),
+        application: PaymentIntentApplication.fromJson(json[r'application']),
+        applicationFeeAmount: mapValueOfType<int>(json, r'application_fee_amount'),
+        automaticPaymentMethods: PaymentFlowsAutomaticPaymentMethodsPaymentIntent.fromJson(json[r'automatic_payment_methods']),
+        canceledAt: mapValueOfType<int>(json, r'canceled_at'),
+        cancellationReason: CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentCancellationReasonEnum.fromJson(json[r'cancellation_reason']),
+        captureMethod: CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentCaptureMethodEnum.fromJson(json[r'capture_method']),
+        clientSecret: mapValueOfType<String>(json, r'client_secret'),
+        confirmationMethod: CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentConfirmationMethodEnum.fromJson(json[r'confirmation_method']),
+        created: mapValueOfType<int>(json, r'created')!,
+        currency: mapValueOfType<String>(json, r'currency'),
+        customer: PaymentIntentCustomer.fromJson(json[r'customer']),
+        description: mapValueOfType<String>(json, r'description'),
+        id: mapValueOfType<String>(json, r'id')!,
+        lastPaymentError: ApiErrors.fromJson(json[r'last_payment_error']),
+        latestCharge: PaymentIntentLatestCharge.fromJson(json[r'latest_charge']),
+        livemode: mapValueOfType<bool>(json, r'livemode')!,
+        metadata: mapCastOfType<String, String>(json, r'metadata') ?? const {},
+        nextAction: PaymentIntentNextAction.fromJson(json[r'next_action']),
+        object: CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentObjectEnum.fromJson(json[r'object'])!,
+        onBehalfOf: PaymentIntentOnBehalfOf.fromJson(json[r'on_behalf_of']),
+        paymentMethod: PaymentIntentPaymentMethod.fromJson(json[r'payment_method']),
+        paymentMethodConfigurationDetails: PaymentMethodConfigBizPaymentMethodConfigurationDetails.fromJson(json[r'payment_method_configuration_details']),
+        paymentMethodOptions: PaymentIntentPaymentMethodOptions.fromJson(json[r'payment_method_options']),
+        paymentMethodTypes: json[r'payment_method_types'] is Iterable
+            ? (json[r'payment_method_types'] as Iterable).cast<String>().toList(growable: false)
+            : const [],
+        presentmentDetails: PaymentFlowsPaymentIntentPresentmentDetails.fromJson(json[r'presentment_details']),
+        processing: PaymentIntentProcessing.fromJson(json[r'processing']),
+        receiptEmail: mapValueOfType<String>(json, r'receipt_email'),
+        review: PaymentIntentReview.fromJson(json[r'review']),
+        setupFutureUsage: CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentSetupFutureUsageEnum.fromJson(json[r'setup_future_usage']),
+        shipping: Shipping.fromJson(json[r'shipping']),
+        statementDescriptor: mapValueOfType<String>(json, r'statement_descriptor'),
+        statementDescriptorSuffix: mapValueOfType<String>(json, r'statement_descriptor_suffix'),
+        status: CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentStatusEnum.fromJson(json[r'status'])!,
+        transferData: TransferData.fromJson(json[r'transfer_data']),
+        transferGroup: mapValueOfType<String>(json, r'transfer_group'),
+      );
+    }
+    return null;
+  }
+
+  static List<CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntent> listFromJson(dynamic json, {bool growable = false,}) {
+    final result = <CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntent>[];
+    if (json is List && json.isNotEmpty) {
+      for (final row in json) {
+        final value = CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntent.fromJson(row);
+        if (value != null) {
+          result.add(value);
+        }
+      }
+    }
+    return result.toList(growable: growable);
+  }
+
+  static Map<String, CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntent> mapFromJson(dynamic json) {
+    final map = <String, CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntent>{};
+    if (json is Map && json.isNotEmpty) {
+      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      for (final entry in json.entries) {
+        final value = CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntent.fromJson(entry.value);
+        if (value != null) {
+          map[entry.key] = value;
+        }
+      }
+    }
+    return map;
+  }
+
+  // maps a json object with a list of CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntent-objects as value to a dart map
+  static Map<String, List<CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntent>> mapListFromJson(dynamic json, {bool growable = false,}) {
+    final map = <String, List<CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntent>>{};
+    if (json is Map && json.isNotEmpty) {
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
+      for (final entry in json.entries) {
+        map[entry.key] = CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntent.listFromJson(entry.value, growable: growable,);
+      }
+    }
+    return map;
+  }
+
+  /// The list of required keys that must be present in a JSON.
+  static const requiredKeys = <String>{
+    'created',
+    'id',
+    'livemode',
+    'object',
+    'status',
+  };
+}
+
+/// Reason for cancellation of this PaymentIntent, either user-provided (`duplicate`, `fraudulent`, `requested_by_customer`, or `abandoned`) or generated by Stripe internally (`failed_invoice`, `void_invoice`, `automatic`, or `expired`).
+class CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentCancellationReasonEnum {
+  /// Instantiate a new enum with the provided [value].
+  const CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentCancellationReasonEnum._(this.value);
+
+  /// The underlying value of this enum member.
+  final String value;
+
+  @override
+  String toString() => value;
+
+  String toJson() => value;
+
+  static const abandoned = CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentCancellationReasonEnum._(r'abandoned');
+  static const automatic = CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentCancellationReasonEnum._(r'automatic');
+  static const duplicate = CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentCancellationReasonEnum._(r'duplicate');
+  static const expired = CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentCancellationReasonEnum._(r'expired');
+  static const failedInvoice = CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentCancellationReasonEnum._(r'failed_invoice');
+  static const fraudulent = CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentCancellationReasonEnum._(r'fraudulent');
+  static const requestedByCustomer = CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentCancellationReasonEnum._(r'requested_by_customer');
+  static const voidInvoice = CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentCancellationReasonEnum._(r'void_invoice');
+
+  /// List of all possible values in this [enum][CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentCancellationReasonEnum].
+  static const values = <CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentCancellationReasonEnum>[
+    abandoned,
+    automatic,
+    duplicate,
+    expired,
+    failedInvoice,
+    fraudulent,
+    requestedByCustomer,
+    voidInvoice,
+  ];
+
+  static CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentCancellationReasonEnum? fromJson(dynamic value) => CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentCancellationReasonEnumTypeTransformer().decode(value);
+
+  static List<CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentCancellationReasonEnum> listFromJson(dynamic json, {bool growable = false,}) {
+    final result = <CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentCancellationReasonEnum>[];
+    if (json is List && json.isNotEmpty) {
+      for (final row in json) {
+        final value = CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentCancellationReasonEnum.fromJson(row);
+        if (value != null) {
+          result.add(value);
+        }
+      }
+    }
+    return result.toList(growable: growable);
+  }
+}
+
+/// Transformation class that can [encode] an instance of [CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentCancellationReasonEnum] to String,
+/// and [decode] dynamic data back to [CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentCancellationReasonEnum].
+class CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentCancellationReasonEnumTypeTransformer {
+  factory CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentCancellationReasonEnumTypeTransformer() => _instance ??= const CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentCancellationReasonEnumTypeTransformer._();
+
+  const CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentCancellationReasonEnumTypeTransformer._();
+
+  String encode(CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentCancellationReasonEnum data) => data.value;
+
+  /// Decodes a [dynamic value][data] to a CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentCancellationReasonEnum.
+  ///
+  /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
+  /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
+  /// cannot be decoded successfully, then an [UnimplementedError] is thrown.
+  ///
+  /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
+  /// and users are still using an old app with the old code.
+  CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentCancellationReasonEnum? decode(dynamic data, {bool allowNull = true}) {
+    if (data != null) {
+      switch (data) {
+        case r'abandoned': return CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentCancellationReasonEnum.abandoned;
+        case r'automatic': return CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentCancellationReasonEnum.automatic;
+        case r'duplicate': return CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentCancellationReasonEnum.duplicate;
+        case r'expired': return CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentCancellationReasonEnum.expired;
+        case r'failed_invoice': return CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentCancellationReasonEnum.failedInvoice;
+        case r'fraudulent': return CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentCancellationReasonEnum.fraudulent;
+        case r'requested_by_customer': return CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentCancellationReasonEnum.requestedByCustomer;
+        case r'void_invoice': return CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentCancellationReasonEnum.voidInvoice;
+        default:
+          if (!allowNull) {
+            throw ArgumentError('Unknown enum value to decode: $data');
+          }
+      }
+    }
+    return null;
+  }
+
+  /// Singleton [CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentCancellationReasonEnumTypeTransformer] instance.
+  static CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentCancellationReasonEnumTypeTransformer? _instance;
+}
+
+
+/// Controls when the funds will be captured from the customer's account.
+class CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentCaptureMethodEnum {
+  /// Instantiate a new enum with the provided [value].
+  const CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentCaptureMethodEnum._(this.value);
+
+  /// The underlying value of this enum member.
+  final String value;
+
+  @override
+  String toString() => value;
+
+  String toJson() => value;
+
+  static const automatic = CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentCaptureMethodEnum._(r'automatic');
+  static const automaticAsync = CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentCaptureMethodEnum._(r'automatic_async');
+  static const manual = CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentCaptureMethodEnum._(r'manual');
+
+  /// List of all possible values in this [enum][CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentCaptureMethodEnum].
+  static const values = <CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentCaptureMethodEnum>[
+    automatic,
+    automaticAsync,
+    manual,
+  ];
+
+  static CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentCaptureMethodEnum? fromJson(dynamic value) => CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentCaptureMethodEnumTypeTransformer().decode(value);
+
+  static List<CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentCaptureMethodEnum> listFromJson(dynamic json, {bool growable = false,}) {
+    final result = <CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentCaptureMethodEnum>[];
+    if (json is List && json.isNotEmpty) {
+      for (final row in json) {
+        final value = CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentCaptureMethodEnum.fromJson(row);
+        if (value != null) {
+          result.add(value);
+        }
+      }
+    }
+    return result.toList(growable: growable);
+  }
+}
+
+/// Transformation class that can [encode] an instance of [CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentCaptureMethodEnum] to String,
+/// and [decode] dynamic data back to [CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentCaptureMethodEnum].
+class CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentCaptureMethodEnumTypeTransformer {
+  factory CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentCaptureMethodEnumTypeTransformer() => _instance ??= const CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentCaptureMethodEnumTypeTransformer._();
+
+  const CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentCaptureMethodEnumTypeTransformer._();
+
+  String encode(CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentCaptureMethodEnum data) => data.value;
+
+  /// Decodes a [dynamic value][data] to a CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentCaptureMethodEnum.
+  ///
+  /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
+  /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
+  /// cannot be decoded successfully, then an [UnimplementedError] is thrown.
+  ///
+  /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
+  /// and users are still using an old app with the old code.
+  CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentCaptureMethodEnum? decode(dynamic data, {bool allowNull = true}) {
+    if (data != null) {
+      switch (data) {
+        case r'automatic': return CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentCaptureMethodEnum.automatic;
+        case r'automatic_async': return CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentCaptureMethodEnum.automaticAsync;
+        case r'manual': return CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentCaptureMethodEnum.manual;
+        default:
+          if (!allowNull) {
+            throw ArgumentError('Unknown enum value to decode: $data');
+          }
+      }
+    }
+    return null;
+  }
+
+  /// Singleton [CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentCaptureMethodEnumTypeTransformer] instance.
+  static CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentCaptureMethodEnumTypeTransformer? _instance;
+}
+
+
+/// Describes whether we can confirm this PaymentIntent automatically, or if it requires customer action to confirm the payment.
+class CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentConfirmationMethodEnum {
+  /// Instantiate a new enum with the provided [value].
+  const CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentConfirmationMethodEnum._(this.value);
+
+  /// The underlying value of this enum member.
+  final String value;
+
+  @override
+  String toString() => value;
+
+  String toJson() => value;
+
+  static const automatic = CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentConfirmationMethodEnum._(r'automatic');
+  static const manual = CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentConfirmationMethodEnum._(r'manual');
+
+  /// List of all possible values in this [enum][CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentConfirmationMethodEnum].
+  static const values = <CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentConfirmationMethodEnum>[
+    automatic,
+    manual,
+  ];
+
+  static CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentConfirmationMethodEnum? fromJson(dynamic value) => CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentConfirmationMethodEnumTypeTransformer().decode(value);
+
+  static List<CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentConfirmationMethodEnum> listFromJson(dynamic json, {bool growable = false,}) {
+    final result = <CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentConfirmationMethodEnum>[];
+    if (json is List && json.isNotEmpty) {
+      for (final row in json) {
+        final value = CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentConfirmationMethodEnum.fromJson(row);
+        if (value != null) {
+          result.add(value);
+        }
+      }
+    }
+    return result.toList(growable: growable);
+  }
+}
+
+/// Transformation class that can [encode] an instance of [CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentConfirmationMethodEnum] to String,
+/// and [decode] dynamic data back to [CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentConfirmationMethodEnum].
+class CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentConfirmationMethodEnumTypeTransformer {
+  factory CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentConfirmationMethodEnumTypeTransformer() => _instance ??= const CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentConfirmationMethodEnumTypeTransformer._();
+
+  const CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentConfirmationMethodEnumTypeTransformer._();
+
+  String encode(CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentConfirmationMethodEnum data) => data.value;
+
+  /// Decodes a [dynamic value][data] to a CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentConfirmationMethodEnum.
+  ///
+  /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
+  /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
+  /// cannot be decoded successfully, then an [UnimplementedError] is thrown.
+  ///
+  /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
+  /// and users are still using an old app with the old code.
+  CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentConfirmationMethodEnum? decode(dynamic data, {bool allowNull = true}) {
+    if (data != null) {
+      switch (data) {
+        case r'automatic': return CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentConfirmationMethodEnum.automatic;
+        case r'manual': return CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentConfirmationMethodEnum.manual;
+        default:
+          if (!allowNull) {
+            throw ArgumentError('Unknown enum value to decode: $data');
+          }
+      }
+    }
+    return null;
+  }
+
+  /// Singleton [CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentConfirmationMethodEnumTypeTransformer] instance.
+  static CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentConfirmationMethodEnumTypeTransformer? _instance;
+}
+
+
+/// String representing the object's type. Objects of the same type share the same value.
+class CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentObjectEnum {
+  /// Instantiate a new enum with the provided [value].
+  const CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentObjectEnum._(this.value);
+
+  /// The underlying value of this enum member.
+  final String value;
+
+  @override
+  String toString() => value;
+
+  String toJson() => value;
+
+  static const paymentIntent = CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentObjectEnum._(r'payment_intent');
+
+  /// List of all possible values in this [enum][CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentObjectEnum].
+  static const values = <CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentObjectEnum>[
+    paymentIntent,
+  ];
+
+  static CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentObjectEnum? fromJson(dynamic value) => CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentObjectEnumTypeTransformer().decode(value);
+
+  static List<CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentObjectEnum> listFromJson(dynamic json, {bool growable = false,}) {
+    final result = <CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentObjectEnum>[];
+    if (json is List && json.isNotEmpty) {
+      for (final row in json) {
+        final value = CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentObjectEnum.fromJson(row);
+        if (value != null) {
+          result.add(value);
+        }
+      }
+    }
+    return result.toList(growable: growable);
+  }
+}
+
+/// Transformation class that can [encode] an instance of [CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentObjectEnum] to String,
+/// and [decode] dynamic data back to [CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentObjectEnum].
+class CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentObjectEnumTypeTransformer {
+  factory CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentObjectEnumTypeTransformer() => _instance ??= const CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentObjectEnumTypeTransformer._();
+
+  const CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentObjectEnumTypeTransformer._();
+
+  String encode(CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentObjectEnum data) => data.value;
+
+  /// Decodes a [dynamic value][data] to a CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentObjectEnum.
+  ///
+  /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
+  /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
+  /// cannot be decoded successfully, then an [UnimplementedError] is thrown.
+  ///
+  /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
+  /// and users are still using an old app with the old code.
+  CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentObjectEnum? decode(dynamic data, {bool allowNull = true}) {
+    if (data != null) {
+      switch (data) {
+        case r'payment_intent': return CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentObjectEnum.paymentIntent;
+        default:
+          if (!allowNull) {
+            throw ArgumentError('Unknown enum value to decode: $data');
+          }
+      }
+    }
+    return null;
+  }
+
+  /// Singleton [CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentObjectEnumTypeTransformer] instance.
+  static CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentObjectEnumTypeTransformer? _instance;
+}
+
+
+/// Indicates that you intend to make future payments with this PaymentIntent's payment method.  If you provide a Customer with the PaymentIntent, you can use this parameter to [attach the payment method](/payments/save-during-payment) to the Customer after the PaymentIntent is confirmed and the customer completes any required actions. If you don't provide a Customer, you can still [attach](/api/payment_methods/attach) the payment method to a Customer after the transaction completes.  If the payment method is `card_present` and isn't a digital wallet, Stripe creates and attaches a [generated_card](/api/charges/object#charge_object-payment_method_details-card_present-generated_card) payment method representing the card to the Customer instead.  When processing card payments, Stripe uses `setup_future_usage` to help you comply with regional legislation and network rules, such as [SCA](/strong-customer-authentication).
+class CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentSetupFutureUsageEnum {
+  /// Instantiate a new enum with the provided [value].
+  const CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentSetupFutureUsageEnum._(this.value);
+
+  /// The underlying value of this enum member.
+  final String value;
+
+  @override
+  String toString() => value;
+
+  String toJson() => value;
+
+  static const offSession = CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentSetupFutureUsageEnum._(r'off_session');
+  static const onSession = CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentSetupFutureUsageEnum._(r'on_session');
+
+  /// List of all possible values in this [enum][CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentSetupFutureUsageEnum].
+  static const values = <CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentSetupFutureUsageEnum>[
+    offSession,
+    onSession,
+  ];
+
+  static CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentSetupFutureUsageEnum? fromJson(dynamic value) => CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentSetupFutureUsageEnumTypeTransformer().decode(value);
+
+  static List<CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentSetupFutureUsageEnum> listFromJson(dynamic json, {bool growable = false,}) {
+    final result = <CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentSetupFutureUsageEnum>[];
+    if (json is List && json.isNotEmpty) {
+      for (final row in json) {
+        final value = CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentSetupFutureUsageEnum.fromJson(row);
+        if (value != null) {
+          result.add(value);
+        }
+      }
+    }
+    return result.toList(growable: growable);
+  }
+}
+
+/// Transformation class that can [encode] an instance of [CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentSetupFutureUsageEnum] to String,
+/// and [decode] dynamic data back to [CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentSetupFutureUsageEnum].
+class CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentSetupFutureUsageEnumTypeTransformer {
+  factory CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentSetupFutureUsageEnumTypeTransformer() => _instance ??= const CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentSetupFutureUsageEnumTypeTransformer._();
+
+  const CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentSetupFutureUsageEnumTypeTransformer._();
+
+  String encode(CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentSetupFutureUsageEnum data) => data.value;
+
+  /// Decodes a [dynamic value][data] to a CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentSetupFutureUsageEnum.
+  ///
+  /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
+  /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
+  /// cannot be decoded successfully, then an [UnimplementedError] is thrown.
+  ///
+  /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
+  /// and users are still using an old app with the old code.
+  CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentSetupFutureUsageEnum? decode(dynamic data, {bool allowNull = true}) {
+    if (data != null) {
+      switch (data) {
+        case r'off_session': return CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentSetupFutureUsageEnum.offSession;
+        case r'on_session': return CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentSetupFutureUsageEnum.onSession;
+        default:
+          if (!allowNull) {
+            throw ArgumentError('Unknown enum value to decode: $data');
+          }
+      }
+    }
+    return null;
+  }
+
+  /// Singleton [CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentSetupFutureUsageEnumTypeTransformer] instance.
+  static CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentSetupFutureUsageEnumTypeTransformer? _instance;
+}
+
+
+/// Status of this PaymentIntent, one of `requires_payment_method`, `requires_confirmation`, `requires_action`, `processing`, `requires_capture`, `canceled`, or `succeeded`. Read more about each PaymentIntent [status](https://stripe.com/docs/payments/intents#intent-statuses).
+class CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentStatusEnum {
+  /// Instantiate a new enum with the provided [value].
+  const CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentStatusEnum._(this.value);
+
+  /// The underlying value of this enum member.
+  final String value;
+
+  @override
+  String toString() => value;
+
+  String toJson() => value;
+
+  static const canceled = CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentStatusEnum._(r'canceled');
+  static const processing = CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentStatusEnum._(r'processing');
+  static const requiresAction = CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentStatusEnum._(r'requires_action');
+  static const requiresCapture = CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentStatusEnum._(r'requires_capture');
+  static const requiresConfirmation = CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentStatusEnum._(r'requires_confirmation');
+  static const requiresPaymentMethod = CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentStatusEnum._(r'requires_payment_method');
+  static const succeeded = CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentStatusEnum._(r'succeeded');
+
+  /// List of all possible values in this [enum][CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentStatusEnum].
+  static const values = <CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentStatusEnum>[
+    canceled,
+    processing,
+    requiresAction,
+    requiresCapture,
+    requiresConfirmation,
+    requiresPaymentMethod,
+    succeeded,
+  ];
+
+  static CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentStatusEnum? fromJson(dynamic value) => CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentStatusEnumTypeTransformer().decode(value);
+
+  static List<CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentStatusEnum> listFromJson(dynamic json, {bool growable = false,}) {
+    final result = <CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentStatusEnum>[];
+    if (json is List && json.isNotEmpty) {
+      for (final row in json) {
+        final value = CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentStatusEnum.fromJson(row);
+        if (value != null) {
+          result.add(value);
+        }
+      }
+    }
+    return result.toList(growable: growable);
+  }
+}
+
+/// Transformation class that can [encode] an instance of [CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentStatusEnum] to String,
+/// and [decode] dynamic data back to [CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentStatusEnum].
+class CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentStatusEnumTypeTransformer {
+  factory CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentStatusEnumTypeTransformer() => _instance ??= const CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentStatusEnumTypeTransformer._();
+
+  const CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentStatusEnumTypeTransformer._();
+
+  String encode(CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentStatusEnum data) => data.value;
+
+  /// Decodes a [dynamic value][data] to a CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentStatusEnum.
+  ///
+  /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
+  /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
+  /// cannot be decoded successfully, then an [UnimplementedError] is thrown.
+  ///
+  /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
+  /// and users are still using an old app with the old code.
+  CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentStatusEnum? decode(dynamic data, {bool allowNull = true}) {
+    if (data != null) {
+      switch (data) {
+        case r'canceled': return CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentStatusEnum.canceled;
+        case r'processing': return CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentStatusEnum.processing;
+        case r'requires_action': return CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentStatusEnum.requiresAction;
+        case r'requires_capture': return CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentStatusEnum.requiresCapture;
+        case r'requires_confirmation': return CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentStatusEnum.requiresConfirmation;
+        case r'requires_payment_method': return CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentStatusEnum.requiresPaymentMethod;
+        case r'succeeded': return CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentStatusEnum.succeeded;
+        default:
+          if (!allowNull) {
+            throw ArgumentError('Unknown enum value to decode: $data');
+          }
+      }
+    }
+    return null;
+  }
+
+  /// Singleton [CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentStatusEnumTypeTransformer] instance.
+  static CustomerBalanceResourceCashBalanceTransactionResourceUnappliedFromPaymentTransactionPaymentIntentStatusEnumTypeTransformer? _instance;
+}
+
+

@@ -1,0 +1,18 @@
+# openapi.model.PaymentPagesCheckoutSessionCustomFieldsNumeric
+
+## Load the model package
+```dart
+import 'package:openapi/api.dart';
+```
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**defaultValue** | **String** | The value that will pre-fill the field on the payment page. | [optional] 
+**maximumLength** | **int** | The maximum character length constraint for the customer's input. | [optional] 
+**minimumLength** | **int** | The minimum character length requirement for the customer's input. | [optional] 
+**value** | **String** | The value entered by the customer, containing only digits. | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+

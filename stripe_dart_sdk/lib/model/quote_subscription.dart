@@ -1,0 +1,849 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.18
+
+// ignore_for_file: unused_element, unused_import
+// ignore_for_file: always_put_required_named_parameters_first
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: lines_longer_than_80_chars
+
+part of openapi.api;
+
+class QuoteSubscription {
+  /// Returns a new [QuoteSubscription] instance.
+  QuoteSubscription({
+    this.application,
+    this.applicationFeePercent,
+    required this.automaticTax,
+    required this.billingCycleAnchor,
+    this.billingCycleAnchorConfig,
+    required this.billingMode,
+    this.billingThresholds,
+    this.cancelAt,
+    required this.cancelAtPeriodEnd,
+    this.canceledAt,
+    this.cancellationDetails,
+    required this.collectionMethod,
+    required this.created,
+    required this.currency,
+    required this.customer,
+    this.daysUntilDue,
+    this.defaultPaymentMethod,
+    this.defaultSource,
+    this.defaultTaxRates = const [],
+    this.description,
+    this.discounts = const [],
+    this.endedAt,
+    required this.id,
+    required this.invoiceSettings,
+    required this.items,
+    this.latestInvoice,
+    required this.livemode,
+    this.metadata = const {},
+    this.nextPendingInvoiceItemInvoice,
+    required this.object,
+    this.onBehalfOf,
+    this.pauseCollection,
+    this.paymentSettings,
+    this.pendingInvoiceItemInterval,
+    this.pendingSetupIntent,
+    this.pendingUpdate,
+    this.schedule,
+    required this.startDate,
+    required this.status,
+    this.testClock,
+    this.transferData,
+    this.trialEnd,
+    this.trialSettings,
+    this.trialStart,
+  });
+
+  SubscriptionApplication? application;
+
+  /// A non-negative decimal between 0 and 100, with at most two decimal places. This represents the percentage of the subscription invoice total that will be transferred to the application owner's Stripe account.
+  num? applicationFeePercent;
+
+  SubscriptionAutomaticTax automaticTax;
+
+  /// The reference point that aligns future [billing cycle](https://stripe.com/docs/subscriptions/billing-cycle) dates. It sets the day of week for `week` intervals, the day of month for `month` and `year` intervals, and the month of year for `year` intervals. The timestamp is in UTC format.
+  int billingCycleAnchor;
+
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  SubscriptionsResourceBillingCycleAnchorConfig? billingCycleAnchorConfig;
+
+  SubscriptionsResourceBillingMode billingMode;
+
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  SubscriptionBillingThresholds? billingThresholds;
+
+  /// A date in the future at which the subscription will automatically get canceled
+  int? cancelAt;
+
+  /// Whether this subscription will (if `status=active`) or did (if `status=canceled`) cancel at the end of the current billing period.
+  bool cancelAtPeriodEnd;
+
+  /// If the subscription has been canceled, the date of that cancellation. If the subscription was canceled with `cancel_at_period_end`, `canceled_at` will reflect the time of the most recent update request, not the end of the subscription period when the subscription is automatically moved to a canceled state.
+  int? canceledAt;
+
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  CancellationDetails? cancellationDetails;
+
+  /// Either `charge_automatically`, or `send_invoice`. When charging automatically, Stripe will attempt to pay this subscription at the end of the cycle using the default source attached to the customer. When sending an invoice, Stripe will email your customer an invoice with payment instructions and mark the subscription as `active`.
+  QuoteSubscriptionCollectionMethodEnum collectionMethod;
+
+  /// Time at which the object was created. Measured in seconds since the Unix epoch.
+  int created;
+
+  /// Three-letter [ISO currency code](https://www.iso.org/iso-4217-currency-codes.html), in lowercase. Must be a [supported currency](https://stripe.com/docs/currencies).
+  String currency;
+
+  SubscriptionCustomer customer;
+
+  /// Number of days a customer has to pay invoices generated by this subscription. This value will be `null` for subscriptions where `collection_method=charge_automatically`.
+  int? daysUntilDue;
+
+  SubscriptionDefaultPaymentMethod? defaultPaymentMethod;
+
+  SubscriptionDefaultSource? defaultSource;
+
+  /// The tax rates that will apply to any subscription item that does not have `tax_rates` set. Invoices created will have their `default_tax_rates` populated from the subscription.
+  List<TaxRate>? defaultTaxRates;
+
+  /// The subscription's description, meant to be displayable to the customer. Use this field to optionally store an explanation of the subscription for rendering in Stripe surfaces and certain local payment methods UIs.
+  String? description;
+
+  /// The discounts applied to the subscription. Subscription item discounts are applied before subscription discounts. Use `expand[]=discounts` to expand each discount.
+  List<InvoiceitemDiscountsInner> discounts;
+
+  /// If the subscription has ended, the date the subscription ended.
+  int? endedAt;
+
+  /// Unique identifier for the object.
+  String id;
+
+  SubscriptionsResourceSubscriptionInvoiceSettings invoiceSettings;
+
+  SubscriptionItemList items;
+
+  SubscriptionLatestInvoice? latestInvoice;
+
+  /// Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.
+  bool livemode;
+
+  /// Set of [key-value pairs](https://stripe.com/docs/api/metadata) that you can attach to an object. This can be useful for storing additional information about the object in a structured format.
+  Map<String, String> metadata;
+
+  /// Specifies the approximate timestamp on which any pending invoice items will be billed according to the schedule provided at `pending_invoice_item_interval`.
+  int? nextPendingInvoiceItemInvoice;
+
+  /// String representing the object's type. Objects of the same type share the same value.
+  QuoteSubscriptionObjectEnum object;
+
+  SubscriptionOnBehalfOf? onBehalfOf;
+
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  SubscriptionsResourcePauseCollection? pauseCollection;
+
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  SubscriptionsResourcePaymentSettings? paymentSettings;
+
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  SubscriptionPendingInvoiceItemInterval? pendingInvoiceItemInterval;
+
+  SubscriptionPendingSetupIntent? pendingSetupIntent;
+
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  SubscriptionsResourcePendingUpdate? pendingUpdate;
+
+  SubscriptionSchedule1? schedule;
+
+  /// Date when the subscription was first created. The date might differ from the `created` date due to backdating.
+  int startDate;
+
+  /// Possible values are `incomplete`, `incomplete_expired`, `trialing`, `active`, `past_due`, `canceled`, `unpaid`, or `paused`.   For `collection_method=charge_automatically` a subscription moves into `incomplete` if the initial payment attempt fails. A subscription in this status can only have metadata and default_source updated. Once the first invoice is paid, the subscription moves into an `active` status. If the first invoice is not paid within 23 hours, the subscription transitions to `incomplete_expired`. This is a terminal status, the open invoice will be voided and no further invoices will be generated.   A subscription that is currently in a trial period is `trialing` and moves to `active` when the trial period is over.   A subscription can only enter a `paused` status [when a trial ends without a payment method](https://stripe.com/docs/billing/subscriptions/trials#create-free-trials-without-payment). A `paused` subscription doesn't generate invoices and can be resumed after your customer adds their payment method. The `paused` status is different from [pausing collection](https://stripe.com/docs/billing/subscriptions/pause-payment), which still generates invoices and leaves the subscription's status unchanged.   If subscription `collection_method=charge_automatically`, it becomes `past_due` when payment is required but cannot be paid (due to failed payment or awaiting additional user actions). Once Stripe has exhausted all payment retry attempts, the subscription will become `canceled` or `unpaid` (depending on your subscriptions settings).   If subscription `collection_method=send_invoice` it becomes `past_due` when its invoice is not paid by the due date, and `canceled` or `unpaid` if it is still not paid by an additional deadline after that. Note that when a subscription has a status of `unpaid`, no subsequent invoices will be attempted (invoices will be created, but then immediately automatically closed). After receiving updated payment information from a customer, you may choose to reopen and pay their closed invoices.
+  QuoteSubscriptionStatusEnum status;
+
+  SubscriptionTestClock? testClock;
+
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  SubscriptionTransferData? transferData;
+
+  /// If the subscription has a trial, the end of that trial.
+  int? trialEnd;
+
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  SubscriptionsTrialsResourceTrialSettings? trialSettings;
+
+  /// If the subscription has a trial, the beginning of that trial.
+  int? trialStart;
+
+  @override
+  bool operator ==(Object other) => identical(this, other) || other is QuoteSubscription &&
+    other.application == application &&
+    other.applicationFeePercent == applicationFeePercent &&
+    other.automaticTax == automaticTax &&
+    other.billingCycleAnchor == billingCycleAnchor &&
+    other.billingCycleAnchorConfig == billingCycleAnchorConfig &&
+    other.billingMode == billingMode &&
+    other.billingThresholds == billingThresholds &&
+    other.cancelAt == cancelAt &&
+    other.cancelAtPeriodEnd == cancelAtPeriodEnd &&
+    other.canceledAt == canceledAt &&
+    other.cancellationDetails == cancellationDetails &&
+    other.collectionMethod == collectionMethod &&
+    other.created == created &&
+    other.currency == currency &&
+    other.customer == customer &&
+    other.daysUntilDue == daysUntilDue &&
+    other.defaultPaymentMethod == defaultPaymentMethod &&
+    other.defaultSource == defaultSource &&
+    _deepEquality.equals(other.defaultTaxRates, defaultTaxRates) &&
+    other.description == description &&
+    _deepEquality.equals(other.discounts, discounts) &&
+    other.endedAt == endedAt &&
+    other.id == id &&
+    other.invoiceSettings == invoiceSettings &&
+    other.items == items &&
+    other.latestInvoice == latestInvoice &&
+    other.livemode == livemode &&
+    _deepEquality.equals(other.metadata, metadata) &&
+    other.nextPendingInvoiceItemInvoice == nextPendingInvoiceItemInvoice &&
+    other.object == object &&
+    other.onBehalfOf == onBehalfOf &&
+    other.pauseCollection == pauseCollection &&
+    other.paymentSettings == paymentSettings &&
+    other.pendingInvoiceItemInterval == pendingInvoiceItemInterval &&
+    other.pendingSetupIntent == pendingSetupIntent &&
+    other.pendingUpdate == pendingUpdate &&
+    other.schedule == schedule &&
+    other.startDate == startDate &&
+    other.status == status &&
+    other.testClock == testClock &&
+    other.transferData == transferData &&
+    other.trialEnd == trialEnd &&
+    other.trialSettings == trialSettings &&
+    other.trialStart == trialStart;
+
+  @override
+  int get hashCode =>
+    // ignore: unnecessary_parenthesis
+    (application == null ? 0 : application!.hashCode) +
+    (applicationFeePercent == null ? 0 : applicationFeePercent!.hashCode) +
+    (automaticTax.hashCode) +
+    (billingCycleAnchor.hashCode) +
+    (billingCycleAnchorConfig == null ? 0 : billingCycleAnchorConfig!.hashCode) +
+    (billingMode.hashCode) +
+    (billingThresholds == null ? 0 : billingThresholds!.hashCode) +
+    (cancelAt == null ? 0 : cancelAt!.hashCode) +
+    (cancelAtPeriodEnd.hashCode) +
+    (canceledAt == null ? 0 : canceledAt!.hashCode) +
+    (cancellationDetails == null ? 0 : cancellationDetails!.hashCode) +
+    (collectionMethod.hashCode) +
+    (created.hashCode) +
+    (currency.hashCode) +
+    (customer.hashCode) +
+    (daysUntilDue == null ? 0 : daysUntilDue!.hashCode) +
+    (defaultPaymentMethod == null ? 0 : defaultPaymentMethod!.hashCode) +
+    (defaultSource == null ? 0 : defaultSource!.hashCode) +
+    (defaultTaxRates == null ? 0 : defaultTaxRates!.hashCode) +
+    (description == null ? 0 : description!.hashCode) +
+    (discounts.hashCode) +
+    (endedAt == null ? 0 : endedAt!.hashCode) +
+    (id.hashCode) +
+    (invoiceSettings.hashCode) +
+    (items.hashCode) +
+    (latestInvoice == null ? 0 : latestInvoice!.hashCode) +
+    (livemode.hashCode) +
+    (metadata.hashCode) +
+    (nextPendingInvoiceItemInvoice == null ? 0 : nextPendingInvoiceItemInvoice!.hashCode) +
+    (object.hashCode) +
+    (onBehalfOf == null ? 0 : onBehalfOf!.hashCode) +
+    (pauseCollection == null ? 0 : pauseCollection!.hashCode) +
+    (paymentSettings == null ? 0 : paymentSettings!.hashCode) +
+    (pendingInvoiceItemInterval == null ? 0 : pendingInvoiceItemInterval!.hashCode) +
+    (pendingSetupIntent == null ? 0 : pendingSetupIntent!.hashCode) +
+    (pendingUpdate == null ? 0 : pendingUpdate!.hashCode) +
+    (schedule == null ? 0 : schedule!.hashCode) +
+    (startDate.hashCode) +
+    (status.hashCode) +
+    (testClock == null ? 0 : testClock!.hashCode) +
+    (transferData == null ? 0 : transferData!.hashCode) +
+    (trialEnd == null ? 0 : trialEnd!.hashCode) +
+    (trialSettings == null ? 0 : trialSettings!.hashCode) +
+    (trialStart == null ? 0 : trialStart!.hashCode);
+
+  @override
+  String toString() => 'QuoteSubscription[application=$application, applicationFeePercent=$applicationFeePercent, automaticTax=$automaticTax, billingCycleAnchor=$billingCycleAnchor, billingCycleAnchorConfig=$billingCycleAnchorConfig, billingMode=$billingMode, billingThresholds=$billingThresholds, cancelAt=$cancelAt, cancelAtPeriodEnd=$cancelAtPeriodEnd, canceledAt=$canceledAt, cancellationDetails=$cancellationDetails, collectionMethod=$collectionMethod, created=$created, currency=$currency, customer=$customer, daysUntilDue=$daysUntilDue, defaultPaymentMethod=$defaultPaymentMethod, defaultSource=$defaultSource, defaultTaxRates=$defaultTaxRates, description=$description, discounts=$discounts, endedAt=$endedAt, id=$id, invoiceSettings=$invoiceSettings, items=$items, latestInvoice=$latestInvoice, livemode=$livemode, metadata=$metadata, nextPendingInvoiceItemInvoice=$nextPendingInvoiceItemInvoice, object=$object, onBehalfOf=$onBehalfOf, pauseCollection=$pauseCollection, paymentSettings=$paymentSettings, pendingInvoiceItemInterval=$pendingInvoiceItemInterval, pendingSetupIntent=$pendingSetupIntent, pendingUpdate=$pendingUpdate, schedule=$schedule, startDate=$startDate, status=$status, testClock=$testClock, transferData=$transferData, trialEnd=$trialEnd, trialSettings=$trialSettings, trialStart=$trialStart]';
+
+  Map<String, dynamic> toJson() {
+    final json = <String, dynamic>{};
+    if (this.application != null) {
+      json[r'application'] = this.application;
+    } else {
+      json[r'application'] = null;
+    }
+    if (this.applicationFeePercent != null) {
+      json[r'application_fee_percent'] = this.applicationFeePercent;
+    } else {
+      json[r'application_fee_percent'] = null;
+    }
+      json[r'automatic_tax'] = this.automaticTax;
+      json[r'billing_cycle_anchor'] = this.billingCycleAnchor;
+    if (this.billingCycleAnchorConfig != null) {
+      json[r'billing_cycle_anchor_config'] = this.billingCycleAnchorConfig;
+    } else {
+      json[r'billing_cycle_anchor_config'] = null;
+    }
+      json[r'billing_mode'] = this.billingMode;
+    if (this.billingThresholds != null) {
+      json[r'billing_thresholds'] = this.billingThresholds;
+    } else {
+      json[r'billing_thresholds'] = null;
+    }
+    if (this.cancelAt != null) {
+      json[r'cancel_at'] = this.cancelAt;
+    } else {
+      json[r'cancel_at'] = null;
+    }
+      json[r'cancel_at_period_end'] = this.cancelAtPeriodEnd;
+    if (this.canceledAt != null) {
+      json[r'canceled_at'] = this.canceledAt;
+    } else {
+      json[r'canceled_at'] = null;
+    }
+    if (this.cancellationDetails != null) {
+      json[r'cancellation_details'] = this.cancellationDetails;
+    } else {
+      json[r'cancellation_details'] = null;
+    }
+      json[r'collection_method'] = this.collectionMethod;
+      json[r'created'] = this.created;
+      json[r'currency'] = this.currency;
+      json[r'customer'] = this.customer;
+    if (this.daysUntilDue != null) {
+      json[r'days_until_due'] = this.daysUntilDue;
+    } else {
+      json[r'days_until_due'] = null;
+    }
+    if (this.defaultPaymentMethod != null) {
+      json[r'default_payment_method'] = this.defaultPaymentMethod;
+    } else {
+      json[r'default_payment_method'] = null;
+    }
+    if (this.defaultSource != null) {
+      json[r'default_source'] = this.defaultSource;
+    } else {
+      json[r'default_source'] = null;
+    }
+    if (this.defaultTaxRates != null) {
+      json[r'default_tax_rates'] = this.defaultTaxRates;
+    } else {
+      json[r'default_tax_rates'] = null;
+    }
+    if (this.description != null) {
+      json[r'description'] = this.description;
+    } else {
+      json[r'description'] = null;
+    }
+      json[r'discounts'] = this.discounts;
+    if (this.endedAt != null) {
+      json[r'ended_at'] = this.endedAt;
+    } else {
+      json[r'ended_at'] = null;
+    }
+      json[r'id'] = this.id;
+      json[r'invoice_settings'] = this.invoiceSettings;
+      json[r'items'] = this.items;
+    if (this.latestInvoice != null) {
+      json[r'latest_invoice'] = this.latestInvoice;
+    } else {
+      json[r'latest_invoice'] = null;
+    }
+      json[r'livemode'] = this.livemode;
+      json[r'metadata'] = this.metadata;
+    if (this.nextPendingInvoiceItemInvoice != null) {
+      json[r'next_pending_invoice_item_invoice'] = this.nextPendingInvoiceItemInvoice;
+    } else {
+      json[r'next_pending_invoice_item_invoice'] = null;
+    }
+      json[r'object'] = this.object;
+    if (this.onBehalfOf != null) {
+      json[r'on_behalf_of'] = this.onBehalfOf;
+    } else {
+      json[r'on_behalf_of'] = null;
+    }
+    if (this.pauseCollection != null) {
+      json[r'pause_collection'] = this.pauseCollection;
+    } else {
+      json[r'pause_collection'] = null;
+    }
+    if (this.paymentSettings != null) {
+      json[r'payment_settings'] = this.paymentSettings;
+    } else {
+      json[r'payment_settings'] = null;
+    }
+    if (this.pendingInvoiceItemInterval != null) {
+      json[r'pending_invoice_item_interval'] = this.pendingInvoiceItemInterval;
+    } else {
+      json[r'pending_invoice_item_interval'] = null;
+    }
+    if (this.pendingSetupIntent != null) {
+      json[r'pending_setup_intent'] = this.pendingSetupIntent;
+    } else {
+      json[r'pending_setup_intent'] = null;
+    }
+    if (this.pendingUpdate != null) {
+      json[r'pending_update'] = this.pendingUpdate;
+    } else {
+      json[r'pending_update'] = null;
+    }
+    if (this.schedule != null) {
+      json[r'schedule'] = this.schedule;
+    } else {
+      json[r'schedule'] = null;
+    }
+      json[r'start_date'] = this.startDate;
+      json[r'status'] = this.status;
+    if (this.testClock != null) {
+      json[r'test_clock'] = this.testClock;
+    } else {
+      json[r'test_clock'] = null;
+    }
+    if (this.transferData != null) {
+      json[r'transfer_data'] = this.transferData;
+    } else {
+      json[r'transfer_data'] = null;
+    }
+    if (this.trialEnd != null) {
+      json[r'trial_end'] = this.trialEnd;
+    } else {
+      json[r'trial_end'] = null;
+    }
+    if (this.trialSettings != null) {
+      json[r'trial_settings'] = this.trialSettings;
+    } else {
+      json[r'trial_settings'] = null;
+    }
+    if (this.trialStart != null) {
+      json[r'trial_start'] = this.trialStart;
+    } else {
+      json[r'trial_start'] = null;
+    }
+    return json;
+  }
+
+  /// Returns a new [QuoteSubscription] instance and imports its values from
+  /// [value] if it's a [Map], null otherwise.
+  // ignore: prefer_constructors_over_static_methods
+  static QuoteSubscription? fromJson(dynamic value) {
+    if (value is Map) {
+      final json = value.cast<String, dynamic>();
+
+      // Ensure that the map contains the required keys.
+      // Note 1: the values aren't checked for validity beyond being non-null.
+      // Note 2: this code is stripped in release mode!
+      assert(() {
+        requiredKeys.forEach((key) {
+          assert(json.containsKey(key), 'Required key "QuoteSubscription[$key]" is missing from JSON.');
+          assert(json[key] != null, 'Required key "QuoteSubscription[$key]" has a null value in JSON.');
+        });
+        return true;
+      }());
+
+      return QuoteSubscription(
+        application: SubscriptionApplication.fromJson(json[r'application']),
+        applicationFeePercent: json[r'application_fee_percent'] == null
+            ? null
+            : num.parse('${json[r'application_fee_percent']}'),
+        automaticTax: SubscriptionAutomaticTax.fromJson(json[r'automatic_tax'])!,
+        billingCycleAnchor: mapValueOfType<int>(json, r'billing_cycle_anchor')!,
+        billingCycleAnchorConfig: SubscriptionsResourceBillingCycleAnchorConfig.fromJson(json[r'billing_cycle_anchor_config']),
+        billingMode: SubscriptionsResourceBillingMode.fromJson(json[r'billing_mode'])!,
+        billingThresholds: SubscriptionBillingThresholds.fromJson(json[r'billing_thresholds']),
+        cancelAt: mapValueOfType<int>(json, r'cancel_at'),
+        cancelAtPeriodEnd: mapValueOfType<bool>(json, r'cancel_at_period_end')!,
+        canceledAt: mapValueOfType<int>(json, r'canceled_at'),
+        cancellationDetails: CancellationDetails.fromJson(json[r'cancellation_details']),
+        collectionMethod: QuoteSubscriptionCollectionMethodEnum.fromJson(json[r'collection_method'])!,
+        created: mapValueOfType<int>(json, r'created')!,
+        currency: mapValueOfType<String>(json, r'currency')!,
+        customer: SubscriptionCustomer.fromJson(json[r'customer'])!,
+        daysUntilDue: mapValueOfType<int>(json, r'days_until_due'),
+        defaultPaymentMethod: SubscriptionDefaultPaymentMethod.fromJson(json[r'default_payment_method']),
+        defaultSource: SubscriptionDefaultSource.fromJson(json[r'default_source']),
+        defaultTaxRates: TaxRate.listFromJson(json[r'default_tax_rates']),
+        description: mapValueOfType<String>(json, r'description'),
+        discounts: InvoiceitemDiscountsInner.listFromJson(json[r'discounts']),
+        endedAt: mapValueOfType<int>(json, r'ended_at'),
+        id: mapValueOfType<String>(json, r'id')!,
+        invoiceSettings: SubscriptionsResourceSubscriptionInvoiceSettings.fromJson(json[r'invoice_settings'])!,
+        items: SubscriptionItemList.fromJson(json[r'items'])!,
+        latestInvoice: SubscriptionLatestInvoice.fromJson(json[r'latest_invoice']),
+        livemode: mapValueOfType<bool>(json, r'livemode')!,
+        metadata: mapCastOfType<String, String>(json, r'metadata')!,
+        nextPendingInvoiceItemInvoice: mapValueOfType<int>(json, r'next_pending_invoice_item_invoice'),
+        object: QuoteSubscriptionObjectEnum.fromJson(json[r'object'])!,
+        onBehalfOf: SubscriptionOnBehalfOf.fromJson(json[r'on_behalf_of']),
+        pauseCollection: SubscriptionsResourcePauseCollection.fromJson(json[r'pause_collection']),
+        paymentSettings: SubscriptionsResourcePaymentSettings.fromJson(json[r'payment_settings']),
+        pendingInvoiceItemInterval: SubscriptionPendingInvoiceItemInterval.fromJson(json[r'pending_invoice_item_interval']),
+        pendingSetupIntent: SubscriptionPendingSetupIntent.fromJson(json[r'pending_setup_intent']),
+        pendingUpdate: SubscriptionsResourcePendingUpdate.fromJson(json[r'pending_update']),
+        schedule: SubscriptionSchedule1.fromJson(json[r'schedule']),
+        startDate: mapValueOfType<int>(json, r'start_date')!,
+        status: QuoteSubscriptionStatusEnum.fromJson(json[r'status'])!,
+        testClock: SubscriptionTestClock.fromJson(json[r'test_clock']),
+        transferData: SubscriptionTransferData.fromJson(json[r'transfer_data']),
+        trialEnd: mapValueOfType<int>(json, r'trial_end'),
+        trialSettings: SubscriptionsTrialsResourceTrialSettings.fromJson(json[r'trial_settings']),
+        trialStart: mapValueOfType<int>(json, r'trial_start'),
+      );
+    }
+    return null;
+  }
+
+  static List<QuoteSubscription> listFromJson(dynamic json, {bool growable = false,}) {
+    final result = <QuoteSubscription>[];
+    if (json is List && json.isNotEmpty) {
+      for (final row in json) {
+        final value = QuoteSubscription.fromJson(row);
+        if (value != null) {
+          result.add(value);
+        }
+      }
+    }
+    return result.toList(growable: growable);
+  }
+
+  static Map<String, QuoteSubscription> mapFromJson(dynamic json) {
+    final map = <String, QuoteSubscription>{};
+    if (json is Map && json.isNotEmpty) {
+      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      for (final entry in json.entries) {
+        final value = QuoteSubscription.fromJson(entry.value);
+        if (value != null) {
+          map[entry.key] = value;
+        }
+      }
+    }
+    return map;
+  }
+
+  // maps a json object with a list of QuoteSubscription-objects as value to a dart map
+  static Map<String, List<QuoteSubscription>> mapListFromJson(dynamic json, {bool growable = false,}) {
+    final map = <String, List<QuoteSubscription>>{};
+    if (json is Map && json.isNotEmpty) {
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
+      for (final entry in json.entries) {
+        map[entry.key] = QuoteSubscription.listFromJson(entry.value, growable: growable,);
+      }
+    }
+    return map;
+  }
+
+  /// The list of required keys that must be present in a JSON.
+  static const requiredKeys = <String>{
+    'automatic_tax',
+    'billing_cycle_anchor',
+    'billing_mode',
+    'cancel_at_period_end',
+    'collection_method',
+    'created',
+    'currency',
+    'customer',
+    'discounts',
+    'id',
+    'invoice_settings',
+    'items',
+    'livemode',
+    'metadata',
+    'object',
+    'start_date',
+    'status',
+  };
+}
+
+/// Either `charge_automatically`, or `send_invoice`. When charging automatically, Stripe will attempt to pay this subscription at the end of the cycle using the default source attached to the customer. When sending an invoice, Stripe will email your customer an invoice with payment instructions and mark the subscription as `active`.
+class QuoteSubscriptionCollectionMethodEnum {
+  /// Instantiate a new enum with the provided [value].
+  const QuoteSubscriptionCollectionMethodEnum._(this.value);
+
+  /// The underlying value of this enum member.
+  final String value;
+
+  @override
+  String toString() => value;
+
+  String toJson() => value;
+
+  static const chargeAutomatically = QuoteSubscriptionCollectionMethodEnum._(r'charge_automatically');
+  static const sendInvoice = QuoteSubscriptionCollectionMethodEnum._(r'send_invoice');
+
+  /// List of all possible values in this [enum][QuoteSubscriptionCollectionMethodEnum].
+  static const values = <QuoteSubscriptionCollectionMethodEnum>[
+    chargeAutomatically,
+    sendInvoice,
+  ];
+
+  static QuoteSubscriptionCollectionMethodEnum? fromJson(dynamic value) => QuoteSubscriptionCollectionMethodEnumTypeTransformer().decode(value);
+
+  static List<QuoteSubscriptionCollectionMethodEnum> listFromJson(dynamic json, {bool growable = false,}) {
+    final result = <QuoteSubscriptionCollectionMethodEnum>[];
+    if (json is List && json.isNotEmpty) {
+      for (final row in json) {
+        final value = QuoteSubscriptionCollectionMethodEnum.fromJson(row);
+        if (value != null) {
+          result.add(value);
+        }
+      }
+    }
+    return result.toList(growable: growable);
+  }
+}
+
+/// Transformation class that can [encode] an instance of [QuoteSubscriptionCollectionMethodEnum] to String,
+/// and [decode] dynamic data back to [QuoteSubscriptionCollectionMethodEnum].
+class QuoteSubscriptionCollectionMethodEnumTypeTransformer {
+  factory QuoteSubscriptionCollectionMethodEnumTypeTransformer() => _instance ??= const QuoteSubscriptionCollectionMethodEnumTypeTransformer._();
+
+  const QuoteSubscriptionCollectionMethodEnumTypeTransformer._();
+
+  String encode(QuoteSubscriptionCollectionMethodEnum data) => data.value;
+
+  /// Decodes a [dynamic value][data] to a QuoteSubscriptionCollectionMethodEnum.
+  ///
+  /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
+  /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
+  /// cannot be decoded successfully, then an [UnimplementedError] is thrown.
+  ///
+  /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
+  /// and users are still using an old app with the old code.
+  QuoteSubscriptionCollectionMethodEnum? decode(dynamic data, {bool allowNull = true}) {
+    if (data != null) {
+      switch (data) {
+        case r'charge_automatically': return QuoteSubscriptionCollectionMethodEnum.chargeAutomatically;
+        case r'send_invoice': return QuoteSubscriptionCollectionMethodEnum.sendInvoice;
+        default:
+          if (!allowNull) {
+            throw ArgumentError('Unknown enum value to decode: $data');
+          }
+      }
+    }
+    return null;
+  }
+
+  /// Singleton [QuoteSubscriptionCollectionMethodEnumTypeTransformer] instance.
+  static QuoteSubscriptionCollectionMethodEnumTypeTransformer? _instance;
+}
+
+
+/// String representing the object's type. Objects of the same type share the same value.
+class QuoteSubscriptionObjectEnum {
+  /// Instantiate a new enum with the provided [value].
+  const QuoteSubscriptionObjectEnum._(this.value);
+
+  /// The underlying value of this enum member.
+  final String value;
+
+  @override
+  String toString() => value;
+
+  String toJson() => value;
+
+  static const subscription = QuoteSubscriptionObjectEnum._(r'subscription');
+
+  /// List of all possible values in this [enum][QuoteSubscriptionObjectEnum].
+  static const values = <QuoteSubscriptionObjectEnum>[
+    subscription,
+  ];
+
+  static QuoteSubscriptionObjectEnum? fromJson(dynamic value) => QuoteSubscriptionObjectEnumTypeTransformer().decode(value);
+
+  static List<QuoteSubscriptionObjectEnum> listFromJson(dynamic json, {bool growable = false,}) {
+    final result = <QuoteSubscriptionObjectEnum>[];
+    if (json is List && json.isNotEmpty) {
+      for (final row in json) {
+        final value = QuoteSubscriptionObjectEnum.fromJson(row);
+        if (value != null) {
+          result.add(value);
+        }
+      }
+    }
+    return result.toList(growable: growable);
+  }
+}
+
+/// Transformation class that can [encode] an instance of [QuoteSubscriptionObjectEnum] to String,
+/// and [decode] dynamic data back to [QuoteSubscriptionObjectEnum].
+class QuoteSubscriptionObjectEnumTypeTransformer {
+  factory QuoteSubscriptionObjectEnumTypeTransformer() => _instance ??= const QuoteSubscriptionObjectEnumTypeTransformer._();
+
+  const QuoteSubscriptionObjectEnumTypeTransformer._();
+
+  String encode(QuoteSubscriptionObjectEnum data) => data.value;
+
+  /// Decodes a [dynamic value][data] to a QuoteSubscriptionObjectEnum.
+  ///
+  /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
+  /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
+  /// cannot be decoded successfully, then an [UnimplementedError] is thrown.
+  ///
+  /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
+  /// and users are still using an old app with the old code.
+  QuoteSubscriptionObjectEnum? decode(dynamic data, {bool allowNull = true}) {
+    if (data != null) {
+      switch (data) {
+        case r'subscription': return QuoteSubscriptionObjectEnum.subscription;
+        default:
+          if (!allowNull) {
+            throw ArgumentError('Unknown enum value to decode: $data');
+          }
+      }
+    }
+    return null;
+  }
+
+  /// Singleton [QuoteSubscriptionObjectEnumTypeTransformer] instance.
+  static QuoteSubscriptionObjectEnumTypeTransformer? _instance;
+}
+
+
+/// Possible values are `incomplete`, `incomplete_expired`, `trialing`, `active`, `past_due`, `canceled`, `unpaid`, or `paused`.   For `collection_method=charge_automatically` a subscription moves into `incomplete` if the initial payment attempt fails. A subscription in this status can only have metadata and default_source updated. Once the first invoice is paid, the subscription moves into an `active` status. If the first invoice is not paid within 23 hours, the subscription transitions to `incomplete_expired`. This is a terminal status, the open invoice will be voided and no further invoices will be generated.   A subscription that is currently in a trial period is `trialing` and moves to `active` when the trial period is over.   A subscription can only enter a `paused` status [when a trial ends without a payment method](https://stripe.com/docs/billing/subscriptions/trials#create-free-trials-without-payment). A `paused` subscription doesn't generate invoices and can be resumed after your customer adds their payment method. The `paused` status is different from [pausing collection](https://stripe.com/docs/billing/subscriptions/pause-payment), which still generates invoices and leaves the subscription's status unchanged.   If subscription `collection_method=charge_automatically`, it becomes `past_due` when payment is required but cannot be paid (due to failed payment or awaiting additional user actions). Once Stripe has exhausted all payment retry attempts, the subscription will become `canceled` or `unpaid` (depending on your subscriptions settings).   If subscription `collection_method=send_invoice` it becomes `past_due` when its invoice is not paid by the due date, and `canceled` or `unpaid` if it is still not paid by an additional deadline after that. Note that when a subscription has a status of `unpaid`, no subsequent invoices will be attempted (invoices will be created, but then immediately automatically closed). After receiving updated payment information from a customer, you may choose to reopen and pay their closed invoices.
+class QuoteSubscriptionStatusEnum {
+  /// Instantiate a new enum with the provided [value].
+  const QuoteSubscriptionStatusEnum._(this.value);
+
+  /// The underlying value of this enum member.
+  final String value;
+
+  @override
+  String toString() => value;
+
+  String toJson() => value;
+
+  static const active = QuoteSubscriptionStatusEnum._(r'active');
+  static const canceled = QuoteSubscriptionStatusEnum._(r'canceled');
+  static const incomplete = QuoteSubscriptionStatusEnum._(r'incomplete');
+  static const incompleteExpired = QuoteSubscriptionStatusEnum._(r'incomplete_expired');
+  static const pastDue = QuoteSubscriptionStatusEnum._(r'past_due');
+  static const paused = QuoteSubscriptionStatusEnum._(r'paused');
+  static const trialing = QuoteSubscriptionStatusEnum._(r'trialing');
+  static const unpaid = QuoteSubscriptionStatusEnum._(r'unpaid');
+
+  /// List of all possible values in this [enum][QuoteSubscriptionStatusEnum].
+  static const values = <QuoteSubscriptionStatusEnum>[
+    active,
+    canceled,
+    incomplete,
+    incompleteExpired,
+    pastDue,
+    paused,
+    trialing,
+    unpaid,
+  ];
+
+  static QuoteSubscriptionStatusEnum? fromJson(dynamic value) => QuoteSubscriptionStatusEnumTypeTransformer().decode(value);
+
+  static List<QuoteSubscriptionStatusEnum> listFromJson(dynamic json, {bool growable = false,}) {
+    final result = <QuoteSubscriptionStatusEnum>[];
+    if (json is List && json.isNotEmpty) {
+      for (final row in json) {
+        final value = QuoteSubscriptionStatusEnum.fromJson(row);
+        if (value != null) {
+          result.add(value);
+        }
+      }
+    }
+    return result.toList(growable: growable);
+  }
+}
+
+/// Transformation class that can [encode] an instance of [QuoteSubscriptionStatusEnum] to String,
+/// and [decode] dynamic data back to [QuoteSubscriptionStatusEnum].
+class QuoteSubscriptionStatusEnumTypeTransformer {
+  factory QuoteSubscriptionStatusEnumTypeTransformer() => _instance ??= const QuoteSubscriptionStatusEnumTypeTransformer._();
+
+  const QuoteSubscriptionStatusEnumTypeTransformer._();
+
+  String encode(QuoteSubscriptionStatusEnum data) => data.value;
+
+  /// Decodes a [dynamic value][data] to a QuoteSubscriptionStatusEnum.
+  ///
+  /// If [allowNull] is true and the [dynamic value][data] cannot be decoded successfully,
+  /// then null is returned. However, if [allowNull] is false and the [dynamic value][data]
+  /// cannot be decoded successfully, then an [UnimplementedError] is thrown.
+  ///
+  /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
+  /// and users are still using an old app with the old code.
+  QuoteSubscriptionStatusEnum? decode(dynamic data, {bool allowNull = true}) {
+    if (data != null) {
+      switch (data) {
+        case r'active': return QuoteSubscriptionStatusEnum.active;
+        case r'canceled': return QuoteSubscriptionStatusEnum.canceled;
+        case r'incomplete': return QuoteSubscriptionStatusEnum.incomplete;
+        case r'incomplete_expired': return QuoteSubscriptionStatusEnum.incompleteExpired;
+        case r'past_due': return QuoteSubscriptionStatusEnum.pastDue;
+        case r'paused': return QuoteSubscriptionStatusEnum.paused;
+        case r'trialing': return QuoteSubscriptionStatusEnum.trialing;
+        case r'unpaid': return QuoteSubscriptionStatusEnum.unpaid;
+        default:
+          if (!allowNull) {
+            throw ArgumentError('Unknown enum value to decode: $data');
+          }
+      }
+    }
+    return null;
+  }
+
+  /// Singleton [QuoteSubscriptionStatusEnumTypeTransformer] instance.
+  static QuoteSubscriptionStatusEnumTypeTransformer? _instance;
+}
+
+

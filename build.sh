@@ -23,9 +23,10 @@ rm -rf "$OUTPUT_DIR"
 
 openapi-generator generate \
   -i "$OPENAPI_FILE" \
-  -g dart-dio \
+  -g dart \
   -o "$OUTPUT_DIR" \
-  --global-property models=Price,Product,Customer,Subscription,Product,modelDocs=false \
+  # --global-property models=price,product,customer,subscription,modelDocs=false \
+  --global-property models \
   --additional-properties=pubName=$PACKAGE_NAME,pubVersion=$PACKAGE_VERSION
  
 

@@ -1,0 +1,34 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.18
+
+// ignore_for_file: unused_element, unused_import
+// ignore_for_file: always_put_required_named_parameters_first
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: lines_longer_than_80_chars
+
+import 'package:openapi/api.dart';
+import 'package:test/test.dart';
+
+// tests for PaymentPagesCheckoutSessionCustomFieldsOption
+void main() {
+  // final instance = PaymentPagesCheckoutSessionCustomFieldsOption();
+
+  group('test PaymentPagesCheckoutSessionCustomFieldsOption', () {
+    // The label for the option, displayed to the customer. Up to 100 characters.
+    // String label
+    test('to test the property `label`', () async {
+      // TODO
+    });
+
+    // The value for this option, not displayed to the customer, used by your integration to reconcile the option selected by the customer. Must be unique to this option, alphanumeric, and up to 100 characters.
+    // String value
+    test('to test the property `value`', () async {
+      // TODO
+    });
+
+
+  });
+
+}

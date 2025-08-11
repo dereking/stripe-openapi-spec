@@ -1,0 +1,118 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.18
+
+// ignore_for_file: unused_element, unused_import
+// ignore_for_file: always_put_required_named_parameters_first
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: lines_longer_than_80_chars
+
+part of openapi.api;
+
+class InboundTransfers1 {
+  /// Returns a new [InboundTransfers1] instance.
+  InboundTransfers1({
+    this.ach,
+  });
+
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  AccessWithAchDetails? ach;
+
+  @override
+  bool operator ==(Object other) => identical(this, other) || other is InboundTransfers1 &&
+    other.ach == ach;
+
+  @override
+  int get hashCode =>
+    // ignore: unnecessary_parenthesis
+    (ach == null ? 0 : ach!.hashCode);
+
+  @override
+  String toString() => 'InboundTransfers1[ach=$ach]';
+
+  Map<String, dynamic> toJson() {
+    final json = <String, dynamic>{};
+    if (this.ach != null) {
+      json[r'ach'] = this.ach;
+    } else {
+      json[r'ach'] = null;
+    }
+    return json;
+  }
+
+  /// Returns a new [InboundTransfers1] instance and imports its values from
+  /// [value] if it's a [Map], null otherwise.
+  // ignore: prefer_constructors_over_static_methods
+  static InboundTransfers1? fromJson(dynamic value) {
+    if (value is Map) {
+      final json = value.cast<String, dynamic>();
+
+      // Ensure that the map contains the required keys.
+      // Note 1: the values aren't checked for validity beyond being non-null.
+      // Note 2: this code is stripped in release mode!
+      assert(() {
+        requiredKeys.forEach((key) {
+          assert(json.containsKey(key), 'Required key "InboundTransfers1[$key]" is missing from JSON.');
+          assert(json[key] != null, 'Required key "InboundTransfers1[$key]" has a null value in JSON.');
+        });
+        return true;
+      }());
+
+      return InboundTransfers1(
+        ach: AccessWithAchDetails.fromJson(json[r'ach']),
+      );
+    }
+    return null;
+  }
+
+  static List<InboundTransfers1> listFromJson(dynamic json, {bool growable = false,}) {
+    final result = <InboundTransfers1>[];
+    if (json is List && json.isNotEmpty) {
+      for (final row in json) {
+        final value = InboundTransfers1.fromJson(row);
+        if (value != null) {
+          result.add(value);
+        }
+      }
+    }
+    return result.toList(growable: growable);
+  }
+
+  static Map<String, InboundTransfers1> mapFromJson(dynamic json) {
+    final map = <String, InboundTransfers1>{};
+    if (json is Map && json.isNotEmpty) {
+      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      for (final entry in json.entries) {
+        final value = InboundTransfers1.fromJson(entry.value);
+        if (value != null) {
+          map[entry.key] = value;
+        }
+      }
+    }
+    return map;
+  }
+
+  // maps a json object with a list of InboundTransfers1-objects as value to a dart map
+  static Map<String, List<InboundTransfers1>> mapListFromJson(dynamic json, {bool growable = false,}) {
+    final map = <String, List<InboundTransfers1>>{};
+    if (json is Map && json.isNotEmpty) {
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
+      for (final entry in json.entries) {
+        map[entry.key] = InboundTransfers1.listFromJson(entry.value, growable: growable,);
+      }
+    }
+    return map;
+  }
+
+  /// The list of required keys that must be present in a JSON.
+  static const requiredKeys = <String>{
+  };
+}
+

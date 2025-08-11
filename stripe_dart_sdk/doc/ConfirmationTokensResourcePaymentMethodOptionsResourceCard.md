@@ -1,0 +1,16 @@
+# openapi.model.ConfirmationTokensResourcePaymentMethodOptionsResourceCard
+
+## Load the model package
+```dart
+import 'package:openapi/api.dart';
+```
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**cvcToken** | **String** | The `cvc_update` Token collected from the Payment Element. | [optional] 
+**installments** | [**ConfirmationTokensResourcePaymentMethodOptionsResourceCardResourceInstallment**](ConfirmationTokensResourcePaymentMethodOptionsResourceCardResourceInstallment.md) |  | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+

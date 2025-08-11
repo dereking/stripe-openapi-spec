@@ -1,0 +1,122 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.18
+
+// ignore_for_file: unused_element, unused_import
+// ignore_for_file: always_put_required_named_parameters_first
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: lines_longer_than_80_chars
+
+import 'package:openapi/api.dart';
+import 'package:test/test.dart';
+
+// tests for Tipping
+void main() {
+  // final instance = Tipping();
+
+  group('test Tipping', () {
+    // CurrencySpecificConfig aed
+    test('to test the property `aed`', () async {
+      // TODO
+    });
+
+    // CurrencySpecificConfig aud
+    test('to test the property `aud`', () async {
+      // TODO
+    });
+
+    // CurrencySpecificConfig bgn
+    test('to test the property `bgn`', () async {
+      // TODO
+    });
+
+    // CurrencySpecificConfig cad
+    test('to test the property `cad`', () async {
+      // TODO
+    });
+
+    // CurrencySpecificConfig chf
+    test('to test the property `chf`', () async {
+      // TODO
+    });
+
+    // CurrencySpecificConfig czk
+    test('to test the property `czk`', () async {
+      // TODO
+    });
+
+    // CurrencySpecificConfig dkk
+    test('to test the property `dkk`', () async {
+      // TODO
+    });
+
+    // CurrencySpecificConfig eur
+    test('to test the property `eur`', () async {
+      // TODO
+    });
+
+    // CurrencySpecificConfig gbp
+    test('to test the property `gbp`', () async {
+      // TODO
+    });
+
+    // CurrencySpecificConfig hkd
+    test('to test the property `hkd`', () async {
+      // TODO
+    });
+
+    // CurrencySpecificConfig huf
+    test('to test the property `huf`', () async {
+      // TODO
+    });
+
+    // CurrencySpecificConfig jpy
+    test('to test the property `jpy`', () async {
+      // TODO
+    });
+
+    // CurrencySpecificConfig myr
+    test('to test the property `myr`', () async {
+      // TODO
+    });
+
+    // CurrencySpecificConfig nok
+    test('to test the property `nok`', () async {
+      // TODO
+    });
+
+    // CurrencySpecificConfig nzd
+    test('to test the property `nzd`', () async {
+      // TODO
+    });
+
+    // CurrencySpecificConfig pln
+    test('to test the property `pln`', () async {
+      // TODO
+    });
+
+    // CurrencySpecificConfig ron
+    test('to test the property `ron`', () async {
+      // TODO
+    });
+
+    // CurrencySpecificConfig sek
+    test('to test the property `sek`', () async {
+      // TODO
+    });
+
+    // CurrencySpecificConfig sgd
+    test('to test the property `sgd`', () async {
+      // TODO
+    });
+
+    // CurrencySpecificConfig usd
+    test('to test the property `usd`', () async {
+      // TODO
+    });
+
+
+  });
+
+}

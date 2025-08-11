@@ -1,0 +1,39 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.18
+
+// ignore_for_file: unused_element, unused_import
+// ignore_for_file: always_put_required_named_parameters_first
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: lines_longer_than_80_chars
+
+import 'package:openapi/api.dart';
+import 'package:test/test.dart';
+
+// tests for InvoicePaymentMethodOptionsUsBankAccountLinkedAccountOptions
+void main() {
+  // final instance = InvoicePaymentMethodOptionsUsBankAccountLinkedAccountOptions();
+
+  group('test InvoicePaymentMethodOptionsUsBankAccountLinkedAccountOptions', () {
+    // InvoicePaymentMethodOptionsUsBankAccountLinkedAccountOptionsFilters filters
+    test('to test the property `filters`', () async {
+      // TODO
+    });
+
+    // The list of permissions to request. The `payment_method` permission must be included.
+    // List<String> permissions (default value: const [])
+    test('to test the property `permissions`', () async {
+      // TODO
+    });
+
+    // Data features requested to be retrieved upon account creation.
+    // List<String> prefetch (default value: const [])
+    test('to test the property `prefetch`', () async {
+      // TODO
+    });
+
+
+  });
+
+}

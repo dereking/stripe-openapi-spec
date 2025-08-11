@@ -1,0 +1,64 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.18
+
+// ignore_for_file: unused_element, unused_import
+// ignore_for_file: always_put_required_named_parameters_first
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: lines_longer_than_80_chars
+
+import 'package:openapi/api.dart';
+import 'package:test/test.dart';
+
+// tests for EntitlementsFeature
+void main() {
+  // final instance = EntitlementsFeature();
+
+  group('test EntitlementsFeature', () {
+    // Inactive features cannot be attached to new products and will not be returned from the features list endpoint.
+    // bool active
+    test('to test the property `active`', () async {
+      // TODO
+    });
+
+    // Unique identifier for the object.
+    // String id
+    test('to test the property `id`', () async {
+      // TODO
+    });
+
+    // Has the value `true` if the object exists in live mode or the value `false` if the object exists in test mode.
+    // bool livemode
+    test('to test the property `livemode`', () async {
+      // TODO
+    });
+
+    // A unique key you provide as your own system identifier. This may be up to 80 characters.
+    // String lookupKey
+    test('to test the property `lookupKey`', () async {
+      // TODO
+    });
+
+    // Set of key-value pairs that you can attach to an object. This can be useful for storing additional information about the object in a structured format.
+    // Map<String, String> metadata (default value: const {})
+    test('to test the property `metadata`', () async {
+      // TODO
+    });
+
+    // The feature's name, for your own purpose, not meant to be displayable to the customer.
+    // String name
+    test('to test the property `name`', () async {
+      // TODO
+    });
+
+    // String representing the object's type. Objects of the same type share the same value.
+    // String object
+    test('to test the property `object`', () async {
+      // TODO
+    });
+
+
+  });
+
+}

@@ -1,0 +1,16 @@
+# openapi.model.DiscountsResourceDiscountAmount
+
+## Load the model package
+```dart
+import 'package:openapi/api.dart';
+```
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**amount** | **int** | The amount, in cents (or local equivalent), of the discount. | 
+**discount** | [**DiscountsResourceDiscountAmountDiscount**](DiscountsResourceDiscountAmountDiscount.md) |  | 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+

@@ -1,0 +1,135 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.18
+
+// ignore_for_file: unused_element, unused_import
+// ignore_for_file: always_put_required_named_parameters_first
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: lines_longer_than_80_chars
+
+part of openapi.api;
+
+class PaymentMethodOptionsCustomerBalance1 {
+  /// Returns a new [PaymentMethodOptionsCustomerBalance1] instance.
+  PaymentMethodOptionsCustomerBalance1({
+    this.bankTransfer,
+    this.fundingType,
+  });
+
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  BankTransferParam1? bankTransfer;
+
+  ///
+  /// Please note: This property should have been non-nullable! Since the specification file
+  /// does not include a default value (using the "default:" property), however, the generated
+  /// source code must fall back to having a nullable type.
+  /// Consider adding a "default:" property in the specification file to hide this note.
+  ///
+  String? fundingType;
+
+  @override
+  bool operator ==(Object other) => identical(this, other) || other is PaymentMethodOptionsCustomerBalance1 &&
+    other.bankTransfer == bankTransfer &&
+    other.fundingType == fundingType;
+
+  @override
+  int get hashCode =>
+    // ignore: unnecessary_parenthesis
+    (bankTransfer == null ? 0 : bankTransfer!.hashCode) +
+    (fundingType == null ? 0 : fundingType!.hashCode);
+
+  @override
+  String toString() => 'PaymentMethodOptionsCustomerBalance1[bankTransfer=$bankTransfer, fundingType=$fundingType]';
+
+  Map<String, dynamic> toJson() {
+    final json = <String, dynamic>{};
+    if (this.bankTransfer != null) {
+      json[r'bank_transfer'] = this.bankTransfer;
+    } else {
+      json[r'bank_transfer'] = null;
+    }
+    if (this.fundingType != null) {
+      json[r'funding_type'] = this.fundingType;
+    } else {
+      json[r'funding_type'] = null;
+    }
+    return json;
+  }
+
+  /// Returns a new [PaymentMethodOptionsCustomerBalance1] instance and imports its values from
+  /// [value] if it's a [Map], null otherwise.
+  // ignore: prefer_constructors_over_static_methods
+  static PaymentMethodOptionsCustomerBalance1? fromJson(dynamic value) {
+    if (value is Map) {
+      final json = value.cast<String, dynamic>();
+
+      // Ensure that the map contains the required keys.
+      // Note 1: the values aren't checked for validity beyond being non-null.
+      // Note 2: this code is stripped in release mode!
+      assert(() {
+        requiredKeys.forEach((key) {
+          assert(json.containsKey(key), 'Required key "PaymentMethodOptionsCustomerBalance1[$key]" is missing from JSON.');
+          assert(json[key] != null, 'Required key "PaymentMethodOptionsCustomerBalance1[$key]" has a null value in JSON.');
+        });
+        return true;
+      }());
+
+      return PaymentMethodOptionsCustomerBalance1(
+        bankTransfer: BankTransferParam1.fromJson(json[r'bank_transfer']),
+        fundingType: mapValueOfType<String>(json, r'funding_type'),
+      );
+    }
+    return null;
+  }
+
+  static List<PaymentMethodOptionsCustomerBalance1> listFromJson(dynamic json, {bool growable = false,}) {
+    final result = <PaymentMethodOptionsCustomerBalance1>[];
+    if (json is List && json.isNotEmpty) {
+      for (final row in json) {
+        final value = PaymentMethodOptionsCustomerBalance1.fromJson(row);
+        if (value != null) {
+          result.add(value);
+        }
+      }
+    }
+    return result.toList(growable: growable);
+  }
+
+  static Map<String, PaymentMethodOptionsCustomerBalance1> mapFromJson(dynamic json) {
+    final map = <String, PaymentMethodOptionsCustomerBalance1>{};
+    if (json is Map && json.isNotEmpty) {
+      json = json.cast<String, dynamic>(); // ignore: parameter_assignments
+      for (final entry in json.entries) {
+        final value = PaymentMethodOptionsCustomerBalance1.fromJson(entry.value);
+        if (value != null) {
+          map[entry.key] = value;
+        }
+      }
+    }
+    return map;
+  }
+
+  // maps a json object with a list of PaymentMethodOptionsCustomerBalance1-objects as value to a dart map
+  static Map<String, List<PaymentMethodOptionsCustomerBalance1>> mapListFromJson(dynamic json, {bool growable = false,}) {
+    final map = <String, List<PaymentMethodOptionsCustomerBalance1>>{};
+    if (json is Map && json.isNotEmpty) {
+      // ignore: parameter_assignments
+      json = json.cast<String, dynamic>();
+      for (final entry in json.entries) {
+        map[entry.key] = PaymentMethodOptionsCustomerBalance1.listFromJson(entry.value, growable: growable,);
+      }
+    }
+    return map;
+  }
+
+  /// The list of required keys that must be present in a JSON.
+  static const requiredKeys = <String>{
+  };
+}
+
